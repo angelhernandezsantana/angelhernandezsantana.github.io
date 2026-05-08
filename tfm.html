@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>TFM · Estrategia de Marca Personal @angelhs.91</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap');
+
+:root {
+  --primary: #7B2FBE;
+  --primary-dark: #4A1578;
+  --primary-light: #9B4DCA;
+  --secondary: #00C9B1;
+  --secondary-light: #4DD9C8;
+  --accent: #FF6B35;
+  --gold: #F7C948;
+  --tierra: #966F4A;
+  --arena: #E3D9C1;
+  --oliva: #7C8657;
+  --dark: #1A1A2E;
+  --dark-alt: #16213E;
+  --white: #FFFFFF;
+  --light: #FAFAFC;
+  --text: #2C2C2C;
+  --text-2: #555555;
+  --text-muted: #888888;
+  --grad: linear-gradient(135deg,#3A0E6E 0%,#7B2FBE 40%,#00C9B1 100%);
+  --grad-b: linear-gradient(135deg,#7B2FBE,#9B4DCA);
+  --grad-acc: linear-gradient(135deg,#FF6B35,#F7C948);
+  --shadow: 0 8px 25px rgba(0,0,0,0.07);
+  --shadow-lg: 0 15px 40px rgba(123,47,190,0.12);
+  --r: 14px;
+  --r-sm: 8px;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Lato',sans-serif;background:#C8C8CC;color:var(--text);line-height:1.75;font-size:10.5pt;-webkit-font-smoothing:antialiased}
+
+/* ── A4 PAGE ── */
+.a4{width:210mm;min-height:297mm;margin:10px auto;background:var(--white);box-shadow:0 5px 30px rgba(0,0,0,0.2);position:relative;overflow:hidden;display:flex;flex-direction:column;page-break-after:always}
+
+/* ── HEADER ── */
+.ph{display:flex;justify-content:space-between;align-items:center;padding:12px 26px;border-bottom:1px solid #ECECEC;flex-shrink:0;position:relative;background:var(--white)}
+.ph::after{content:'';position:absolute;bottom:-1px;left:0;width:90px;height:3px;background:var(--grad);border-radius:0 3px 3px 0}
+.ph-av{width:34px;height:34px;border-radius:50%;object-fit:cover;border:2px solid var(--primary);display:block}
+.ph-av-fb{width:34px;height:34px;border-radius:50%;background:var(--grad-b);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:14px;font-family:'Montserrat',sans-serif}
+.ph-r{display:flex;align-items:center;gap:7px}
+
+/* ── LOGO IMAGEN (NUEVO) ── */
+.logo-img{
+  height:36px;           /* Altura fija del logo en el header */
+  width:auto;            /* El ancho se ajusta proporcionalmente */
+  max-width:180px;       /* Máximo ancho para que no desborde */
+  object-fit:contain;    /* CLAVE: nunca se recorta ni se deforma */
+  display:block;
+}
+
+/* ── LOGO PORTADA (NUEVO) ── */
+.logo-img-portada{
+  height:32px;
+  width:auto;
+  max-width:170px;
+  object-fit:contain;
+  display:block;
+  filter:brightness(0) invert(1); /* Hace el logo blanco para fondos oscuros */
+}
+
+/* ── LOGO CONCLUSIONES (NUEVO) ── */
+.logo-img-dark{
+  height:36px;
+  width:auto;
+  max-width:180px;
+  object-fit:contain;
+  display:block;
+  filter:brightness(0) invert(1); /* Logo blanco para fondo oscuro */
+}
+
+/* Eliminados: .logo-tri y .logo-txt ya NO se necesitan */
+
+/* ── BODY ── */
+.pb{flex:1;padding:22px 30px 14px}
+.pb-c{flex:1;padding:16px 30px 10px}
+
+/* ── FOOTER ── */
+.pf{display:flex;justify-content:space-between;align-items:center;padding:8px 26px;border-top:1px solid #F0F0F0;flex-shrink:0;font-size:6.5pt;font-family:'Montserrat',sans-serif;color:var(--text-muted)}
+.pf .pn{font-weight:800;font-size:9pt;color:var(--primary)}
+
+/* ── TYPOGRAPHY ── */
+h2{font-family:'Montserrat',sans-serif;font-size:15pt;font-weight:800;color:var(--primary);margin-bottom:12px;line-height:1.25}
+h3{font-family:'Montserrat',sans-serif;font-size:11.5pt;font-weight:700;color:var(--dark);margin:16px 0 7px;padding-bottom:5px;border-bottom:2px solid #F0F0F0;position:relative}
+h3::after{content:'';position:absolute;bottom:-2px;left:0;width:45px;height:2px;background:var(--grad)}
+h4{font-family:'Montserrat',sans-serif;font-size:9.5pt;font-weight:700;color:var(--primary-dark);margin:10px 0 4px}
+p{margin-bottom:9px;text-align:justify;font-size:9.8pt;line-height:1.7;color:var(--text-2)}
+strong{color:var(--text)}
+em{font-style:italic}
+
+/* ── BANNERS ── */
+.sb{background:var(--grad);padding:16px 22px;border-radius:var(--r);margin-bottom:15px;position:relative;overflow:hidden}
+.sb::before{content:'';position:absolute;top:-25px;right:-25px;width:100px;height:100px;background:rgba(255,255,255,0.06);border-radius:50%}
+.stag{display:inline-block;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);color:rgba(255,255,255,.9);padding:3px 11px;border-radius:18px;font-size:6.5pt;font-weight:600;letter-spacing:2px;text-transform:uppercase;font-family:'Montserrat',sans-serif;margin-bottom:5px}
+.stitle{font-family:'Montserrat',sans-serif;font-weight:800;font-size:16pt;color:#fff;line-height:1.2}
+.stitle span{color:var(--secondary-light)}
+
+/* ── GRIDS ── */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+.g4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:8px}
+.g2a{display:grid;grid-template-columns:1.15fr 0.85fr;gap:16px}
+.g2b{display:grid;grid-template-columns:0.85fr 1.15fr;gap:16px}
+
+/* ── CARDS ── */
+.card{background:var(--white);border-radius:var(--r-sm);padding:14px;box-shadow:var(--shadow);border:1px solid #F0F0F0;position:relative;overflow:hidden;height:100%}
+.card-top::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad)}
+.card-dark{background:var(--dark);color:#fff;border:none}
+.card-dark h4{color:var(--secondary-light)}
+.card-dark p{color:rgba(255,255,255,.8)}
+.card-grad{background:var(--grad-b);color:#fff;border:none}
+.card-warm{background:linear-gradient(135deg,#FFF8F0,#FFE8D0);border-left:4px solid var(--tierra)}
+.card-teal{background:linear-gradient(135deg,#EAFFF8,#D5F5ED);border-left:4px solid var(--secondary)}
+.ci{font-size:20pt;display:block;margin-bottom:5px}
+
+/* ── STATS ── */
+.stat{background:var(--white);border-radius:var(--r-sm);padding:10px 8px;text-align:center;box-shadow:var(--shadow);border:1px solid #F0F0F0;position:relative}
+.stat::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--grad);border-radius:0 0 var(--r-sm) var(--r-sm)}
+.sn{font-family:'Montserrat',sans-serif;font-weight:900;font-size:19pt;line-height:1;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.sl{font-size:6pt;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-muted);font-family:'Montserrat',sans-serif;margin-top:2px}
+.ss{font-size:6pt;color:#28A745;font-weight:700;margin-top:1px}
+
+/* ── DAFO ── */
+.dafo{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow-lg);margin:12px 0}
+.dc{padding:12px}
+.dc h4{font-size:7.5pt;letter-spacing:1px;text-transform:uppercase;margin:0 0 5px;display:flex;align-items:center;gap:5px}
+.dc ul{list-style:none}
+.dc ul li{font-size:8pt;padding:2px 0 2px 10px;position:relative;line-height:1.5;color:rgba(255,255,255,.85)}
+.dc ul li::before{content:'▸';position:absolute;left:0;color:rgba(255,255,255,.4)}
+.df{background:linear-gradient(135deg,#1A1A2E,#0F1B38)}.df h4{color:var(--secondary-light)}
+.dd{background:linear-gradient(135deg,#2D1B4E,#3B2060)}.dd h4{color:#FFB088}
+.do{background:linear-gradient(135deg,#0A3D2E,#0D4D3A)}.do h4{color:#A8F0D8}
+.da{background:linear-gradient(135deg,#3D1A00,#522200)}.da h4{color:#FFD4A8}
+
+/* ── PESTEL ── */
+.pr{display:flex;gap:9px;margin-bottom:9px;align-items:flex-start}
+.pb2{width:26px;height:26px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-weight:900;font-size:10pt;color:#fff;flex-shrink:0}
+.p-p{background:linear-gradient(135deg,#6B21C8,#9B4DCA)}
+.p-e{background:linear-gradient(135deg,#0A6E3E,#28A745)}
+.p-s{background:linear-gradient(135deg,#1565C0,#2196F3)}
+.p-t{background:linear-gradient(135deg,#BF360C,#FF6B35)}
+.p-ec{background:linear-gradient(135deg,#2E7D32,#4CAF50)}
+.p-l{background:linear-gradient(135deg,#B71C1C,#EF5350)}
+.pc{flex:1}
+.pc h4{margin:0 0 3px;font-size:8.5pt;color:var(--dark)}
+.pc p{font-size:8pt;margin-bottom:3px}
+.pimp{background:rgba(123,47,190,.06);border-left:3px solid var(--primary);padding:3px 7px;border-radius:0 5px 5px 0;font-size:7.5pt;font-style:italic;color:var(--primary-dark);margin-top:3px}
+
+/* ── LISTS ── */
+.bl{list-style:none;margin:6px 0}
+.bl li{padding:3px 0 3px 16px;position:relative;font-size:9pt;color:var(--text-2);line-height:1.55}
+.bl li::before{content:'';position:absolute;left:0;top:9px;width:7px;height:7px;background:var(--grad);border-radius:50%}
+.nl{list-style:none;margin:6px 0;counter-reset:nl}
+.nl li{padding:4px 0 4px 28px;position:relative;font-size:9pt;color:var(--text-2);line-height:1.5;counter-increment:nl;border-bottom:1px solid #F5F5F5}
+.nl li::before{content:counter(nl);position:absolute;left:0;top:4px;width:19px;height:19px;background:var(--grad-b);border-radius:50%;color:#fff;font-size:7pt;font-weight:700;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif}
+
+/* ── TABLE ── */
+.tbl{width:100%;border-collapse:separate;border-spacing:0;border-radius:var(--r-sm);overflow:hidden;box-shadow:var(--shadow);margin:10px 0;font-size:8pt}
+.tbl thead{background:var(--grad)}
+.tbl th{color:#fff;padding:9px 7px;font-family:'Montserrat',sans-serif;font-size:7pt;font-weight:700;text-align:left;letter-spacing:.5px;text-transform:uppercase}
+.tbl td{padding:8px 7px;border-bottom:1px solid #F3F0FA;color:var(--text-2);vertical-align:middle}
+.tbl tbody tr:last-child td{border-bottom:none}
+.tbl tbody tr:nth-child(even){background:#FAFAFF}
+.bf{display:inline-block;padding:2px 7px;border-radius:10px;font-size:6.5pt;font-weight:700;font-family:'Montserrat',sans-serif}
+.bf-t{background:#E3F2FD;color:#0D47A1}
+.bf-m{background:#F3E5F5;color:#4A148C}
+.bf-b{background:#E8F5E9;color:#1B5E20}
+.bf-d{background:#FFF3E0;color:#E65100}
+.bfmt{display:inline-block;padding:2px 7px;border-radius:8px;font-size:6.5pt;font-weight:700;font-family:'Montserrat',sans-serif;background:var(--grad-b);color:#fff}
+
+/* ── QUOTE ── */
+.qt{background:var(--grad);border-radius:var(--r);padding:16px 20px;margin:12px 0;position:relative;overflow:hidden}
+.qt::before{content:'"';position:absolute;top:-6px;left:10px;font-size:55pt;color:rgba(255,255,255,.1);font-family:Georgia,serif;line-height:1}
+.qt p{color:#fff;font-size:10pt;font-style:italic;font-weight:500;position:relative;z-index:1;margin:0;text-align:left;line-height:1.6}
+
+/* ── HIGHLIGHT ── */
+.hl{background:linear-gradient(to right,rgba(123,47,190,.06),rgba(0,201,177,.06));border-left:4px solid var(--primary);padding:10px 14px;border-radius:0 var(--r-sm) var(--r-sm) 0;margin:9px 0}
+.hl-acc{background:linear-gradient(to right,rgba(255,107,53,.06),rgba(247,201,72,.06));border-left:4px solid var(--accent);padding:9px 13px;border-radius:0 var(--r-sm) var(--r-sm) 0;margin:8px 0}
+
+/* ── FIGURE APA 7 ── */
+.fig{margin:12px 0;page-break-inside:avoid}
+.fn{font-family:'Lato',sans-serif;font-weight:700;font-size:9pt;color:var(--dark);margin-bottom:1px}
+.ft{font-family:'Lato',sans-serif;font-style:italic;font-size:9pt;color:var(--dark);margin-bottom:7px}
+.fig img{width:100%;height:auto;border-radius:var(--r-sm);box-shadow:var(--shadow);display:block}
+.fnote{font-size:7.5pt;color:var(--text-muted);margin-top:4px;line-height:1.4;text-align:left}
+.fnote em{font-style:italic}
+
+/* ── EMPATHY ── */
+.emp{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow-lg);margin:10px 0}
+.ec{padding:12px}
+.ec h4{color:var(--secondary-light)!important;font-size:7pt;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 4px;font-family:'Montserrat',sans-serif;font-weight:700}
+.ec p{font-size:8pt;color:rgba(255,255,255,.82);line-height:1.5;text-align:left;margin:0}
+.e1{background:linear-gradient(135deg,#1A1A2E,#2D1B4E)}
+.e2{background:linear-gradient(135deg,#16213E,#0F3460)}
+.e3{background:linear-gradient(135deg,#0A3D2E,#0F5240)}
+.e4{background:linear-gradient(135deg,#3D1A00,#5A2800)}
+
+/* ── STRATEGY ── */
+.sr{display:flex;align-items:flex-start;gap:9px;padding:5px 0;border-bottom:1px solid #F5F5F5}
+.slbl{min-width:110px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:7pt;color:var(--primary);text-transform:uppercase;letter-spacing:.5px;padding-top:2px;flex-shrink:0}
+.sval{font-size:8.5pt;color:var(--text-2);line-height:1.5;flex:1}
+
+/* ── KPI CARD ── */
+.kc{display:flex;align-items:center;gap:9px;padding:10px;background:var(--white);border-radius:var(--r-sm);box-shadow:var(--shadow);border:1px solid #F0F0F0;margin-bottom:7px}
+.ki{width:36px;height:36px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:15pt;flex-shrink:0;color:#fff}
+.kv{font-family:'Montserrat',sans-serif;font-weight:900;font-size:13pt;color:var(--primary);line-height:1}
+.kn{font-weight:700;font-size:7.5pt;color:var(--dark);margin-top:1px}
+.kd{font-size:7pt;color:var(--text-muted);margin-top:1px}
+.kb{height:3px;background:#F0F0F0;border-radius:2px;margin-top:4px;overflow:hidden}
+.kbf{height:100%;border-radius:2px;background:var(--grad)}
+
+/* ── PILLAR ── */
+.pil{border-radius:var(--r-sm);padding:12px;position:relative;overflow:hidden}
+.piln{position:absolute;top:2px;right:6px;font-family:'Montserrat',sans-serif;font-weight:900;font-size:26pt;opacity:.08;line-height:1}
+.pilt{font-family:'Montserrat',sans-serif;font-weight:700;font-size:8pt;text-transform:uppercase;letter-spacing:.5px;color:var(--dark);margin-bottom:2px}
+.pils{font-size:6.5pt;color:var(--text-muted);font-style:italic;margin-bottom:4px}
+.pild{font-size:8pt;color:var(--text-2);line-height:1.5;margin:0;text-align:left}
+.pil1{background:linear-gradient(135deg,#FFF8F0,#FFE8D0);border-top:4px solid var(--accent)}
+.pil2{background:linear-gradient(135deg,#F0FFF8,#D0F5E8);border-top:4px solid #28A745}
+.pil3{background:linear-gradient(135deg,#F0F0FF,#E0D5FF);border-top:4px solid var(--primary)}
+.pil4{background:linear-gradient(135deg,#FFF0F5,#FFD5E5);border-top:4px solid #E91E96}
+
+/* ── WORKFLOW ── */
+.wf{display:flex;align-items:flex-start;gap:9px;padding:8px;background:var(--white);border-radius:var(--r-sm);box-shadow:var(--shadow);border:1px solid #F0F0F0;margin-bottom:6px}
+.wfn{width:24px;height:24px;background:var(--grad);border-radius:6px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-family:'Montserrat',sans-serif;font-size:10pt;flex-shrink:0}
+.wft{font-family:'Montserrat',sans-serif;font-weight:700;font-size:8.5pt;color:var(--dark);margin-bottom:2px}
+.wfd{font-size:8pt;color:var(--text-2);line-height:1.5;margin:0;text-align:left}
+
+/* ── MSTAT ── */
+.ms{background:var(--grad);border-radius:var(--r-sm);padding:11px;text-align:center;position:relative;overflow:hidden}
+.ms::before{content:'';position:absolute;top:-12px;right:-12px;width:50px;height:50px;background:rgba(255,255,255,.08);border-radius:50%}
+.msp{font-family:'Montserrat',sans-serif;font-weight:900;font-size:20pt;color:#fff;line-height:1;position:relative;z-index:1}
+.msd{font-size:6.5pt;color:rgba(255,255,255,.8);position:relative;z-index:1;margin-top:3px;line-height:1.3}
+
+/* ── COLOR SWATCH ── */
+.sw{width:100%;height:45px;border-radius:var(--r-sm) var(--r-sm) 0 0}
+.swi{background:#fff;padding:5px 8px;border-radius:0 0 var(--r-sm) var(--r-sm);box-shadow:var(--shadow)}
+.swn{font-family:'Montserrat',sans-serif;font-weight:700;font-size:7.5pt;color:var(--dark)}
+.swh{font-size:6.5pt;color:var(--text-muted);font-family:monospace}
+
+/* ── TOC ── */
+.toc-i{display:flex;align-items:center;gap:9px;padding:6px 0;border-bottom:1px solid #F0F0F0}
+.toc-n{width:24px;height:24px;background:var(--grad-b);border-radius:6px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:8pt;font-family:'Montserrat',sans-serif;flex-shrink:0}
+.toc-t{flex:1}
+.toc-m{font-weight:600;font-size:8.5pt;font-family:'Montserrat',sans-serif;color:var(--dark)}
+.toc-s{font-size:7pt;color:var(--text-muted)}
+.toc-d{flex:1;border-bottom:1px dotted #CCC;margin:0 6px 3px}
+.toc-p{font-family:'Montserrat',sans-serif;font-weight:700;font-size:8.5pt;color:var(--primary);min-width:18px;text-align:right}
+
+/* ── CONCLUSION ── */
+.con{display:flex;gap:9px;align-items:flex-start;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+.conn{width:22px;height:22px;background:var(--grad);border-radius:5px;color:#fff;font-weight:800;font-size:9pt;font-family:'Montserrat',sans-serif;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.cont{font-size:9pt;color:rgba(255,255,255,.85);line-height:1.6;flex:1;margin:0;text-align:left}
+
+/* ── BIBLIOGRAPHY ── */
+.bib{text-indent:-1.8em;padding-left:1.8em;margin-bottom:6px;font-size:8.2pt;line-height:1.55;color:var(--text-2);text-align:left}
+
+/* ── DIVIDER ── */
+.div{display:flex;align-items:center;gap:7px;margin:14px 0}
+.div::before,.div::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,#D0D0D0,transparent)}
+.div span{width:5px;height:5px;background:var(--grad);border-radius:50%}
+
+/* ── VOZ ITEM ── */
+.voz{background:#fff;border-radius:var(--r-sm);padding:10px 12px;box-shadow:var(--shadow);display:flex;align-items:flex-start;gap:9px;margin-bottom:7px}
+.vozi{font-size:18pt;flex-shrink:0;width:32px;text-align:center}
+.vozl{font-family:'Montserrat',sans-serif;font-weight:700;font-size:8pt;color:var(--primary);text-transform:uppercase;letter-spacing:.5px;margin-bottom:2px}
+.vozd{font-size:8pt;color:var(--text-2);line-height:1.4;margin:0;text-align:left}
+
+/* ── ECOSYSTEM ── */
+.eco{background:#fff;border-radius:var(--r-sm);padding:13px;box-shadow:var(--shadow);text-align:center;border-top:4px solid var(--primary)}
+.ecoi{font-size:22pt;display:block;margin-bottom:5px}
+.ecot{font-family:'Montserrat',sans-serif;font-weight:700;font-size:9pt;color:var(--dark);margin-bottom:3px}
+.ecor{font-size:7pt;color:var(--primary);font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:5px;font-family:'Montserrat',sans-serif}
+.ecod{font-size:8pt;color:var(--text-2);line-height:1.4;margin:0;text-align:left}
+
+/* ── PRINT ── */
+@media print{body{background:#fff}.a4{box-shadow:none;margin:0;page-break-after:always}}
+</style>
+</head>
+<body>
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     PORTADA
+══════════════════════════════════════════════════════════════ -->
+<div class="a4" style="background:var(--grad);padding:0">
+  <div style="display:flex;justify-content:space-between;align-items:center;padding:18px 28px;border-bottom:1px solid rgba(255,255,255,.12);position:relative;z-index:5">
+    <div style="font-family:'Montserrat',sans-serif;font-size:6.5pt;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.85);background:rgba(255,255,255,.1);padding:4px 13px;border-radius:18px;border:1px solid rgba(255,255,255,.2)">Redacción de Contenidos Digitales · Marketing y Ventas Sociales</div>
+    <!-- ★ LOGO PORTADA (fondo oscuro → versión blanca) ★ -->
+    <img src="logo.webp" alt="Cruz de Piedra · CIFP" class="logo-img-portada">
+  </div>
+
+  <div style="flex:1;padding:30px 36px 18px;display:flex;flex-direction:column;position:relative;z-index:2">
+    <div style="position:absolute;top:-60px;right:-60px;width:280px;height:280px;background:rgba(0,201,177,.08);border-radius:50%"></div>
+    <div style="position:absolute;bottom:-100px;left:-60px;width:320px;height:320px;background:rgba(255,255,255,.03);border-radius:50%"></div>
+
+    <div class="stag" style="margin-bottom:16px;width:fit-content">✦ Caso de Estudio · Instagram · Gastronomía Canaria</div>
+    <div style="font-family:'Montserrat',sans-serif;font-weight:300;font-size:10.5pt;color:rgba(255,255,255,.8);letter-spacing:7px;text-transform:uppercase;margin-bottom:4px">ESTRATEGIA DE CREACIÓN DE</div>
+    <div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:10.5pt;color:rgba(255,255,255,.8);letter-spacing:7px;text-transform:uppercase;margin-bottom:10px">MARCA PERSONAL EN INSTAGRAM:</div>
+    <div style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:33pt;color:#fff;text-transform:uppercase;letter-spacing:-1px;line-height:1;text-shadow:0 4px 20px rgba(0,0,0,.3);margin-bottom:2px">EL CASO DE</div>
+    <div style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:33pt;color:var(--secondary-light);text-transform:uppercase;letter-spacing:-1px;line-height:1;text-shadow:0 4px 20px rgba(0,0,0,.3)">@ANGELHS.91</div>
+    <p style="color:rgba(255,255,255,.7);font-size:9.5pt;font-style:italic;font-family:'Lato',sans-serif;margin-top:9px;margin-bottom:20px;text-align:left">Análisis de identidad digital y estrategia de contenidos gastronómicos en Canarias</p>
+
+    <div style="position:relative;width:230px;height:265px;margin:0 auto">
+      <div style="position:absolute;inset:-6px;border-radius:15px;background:linear-gradient(135deg,var(--secondary),var(--accent));opacity:.6"></div>
+      <img src="foto_portada.webp" alt="Ángel Jesús Hernández Santana" style="width:100%;height:100%;object-fit:cover;border-radius:11px;position:relative;z-index:1;display:block" onerror="this.style.background='rgba(255,255,255,0.1)';this.style.minHeight='265px'">
+    </div>
+
+    <div style="display:flex;gap:10px;margin-top:18px;justify-content:center">
+      <div style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:9px;padding:8px 13px;text-align:center;flex:1;backdrop-filter:blur(8px)">
+        <div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:15pt;color:var(--secondary-light)">9.5%</div>
+        <div style="font-size:6pt;color:rgba(255,255,255,.65);text-transform:uppercase;letter-spacing:1px;margin-top:1px">Engagement Rate</div>
+      </div>
+      <div style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:9px;padding:8px 13px;text-align:center;flex:1;backdrop-filter:blur(8px)">
+        <div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:15pt;color:var(--secondary-light)">204</div>
+        <div style="font-size:6pt;color:rgba(255,255,255,.65);text-transform:uppercase;letter-spacing:1px;margin-top:1px">Seguidores</div>
+      </div>
+      <div style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:9px;padding:8px 13px;text-align:center;flex:1;backdrop-filter:blur(8px)">
+        <div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:15pt;color:var(--secondary-light)">+25%</div>
+        <div style="font-size:6pt;color:rgba(255,255,255,.65);text-transform:uppercase;letter-spacing:1px;margin-top:1px">Objetivo Growth</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="width:100%;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.3),transparent)"></div>
+  <div style="padding:12px 28px;background:rgba(0,0,0,.2);display:flex;justify-content:space-between;align-items:center;position:relative;z-index:2">
+    <div style="color:#fff;font-family:'Montserrat',sans-serif;font-weight:600;font-size:9.5pt">Ángel Jesús Hernández Santana</div>
+    <div style="color:rgba(255,255,255,.7);font-size:8.5pt">15 / 12 / 2025</div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     TABLA DE CONTENIDOS
+══════════════════════════════════════════════════════════════ -->
+<div class="a4">
+  <div style="background:var(--grad);padding:22px 28px 18px">
+    <div class="stag">✦ Índice del Documento</div>
+    <div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:19pt;color:#fff;line-height:1.1">Tabla de <span style="color:var(--secondary-light)">Contenidos</span></div>
+  </div>
+  <div style="padding:16px 28px">
+    <div class="toc-i"><div class="toc-n">1</div><div class="toc-t"><div class="toc-m">Introducción</div><div class="toc-s">Objetivo General · Objetivos Específicos</div></div><div class="toc-d"></div><div class="toc-p">2</div></div>
+    <div class="toc-i"><div class="toc-n">2</div><div class="toc-t"><div class="toc-m">Investigación Interna</div><div class="toc-s">Identidad · Recursos · Imagen Actual · DAFO Interno</div></div><div class="toc-d"></div><div class="toc-p">4</div></div>
+    <div class="toc-i"><div class="toc-n">3</div><div class="toc-t"><div class="toc-m">Investigación Externa</div><div class="toc-s">Análisis PESTEL · Mercado · Competencia · DAFO Externo</div></div><div class="toc-d"></div><div class="toc-p">8</div></div>
+    <div class="toc-i"><div class="toc-n">4</div><div class="toc-t"><div class="toc-m">Perfiles de Audiencia y Tendencias</div><div class="toc-s">Clientes · Mapa de Empatía · Competencia · Tendencias · DAFO</div></div><div class="toc-d"></div><div class="toc-p">13</div></div>
+    <div class="toc-i"><div class="toc-n">5</div><div class="toc-t"><div class="toc-m">Síntesis Estratégica</div><div class="toc-s">Marco Estratégico · Voz de Marca · Propuesta de Valor · DAFO Digital · KPIs SMART</div></div><div class="toc-d"></div><div class="toc-p">16</div></div>
+    <div class="toc-i"><div class="toc-n">6</div><div class="toc-t"><div class="toc-m">Plan de Medios</div><div class="toc-s">Canales Digitales · Instagram · LinkedIn · Pilares · Calendario Editorial · Dinamización</div></div><div class="toc-d"></div><div class="toc-p">18</div></div>
+    <div class="toc-i"><div class="toc-n">7</div><div class="toc-t"><div class="toc-m">Control de KPIs</div><div class="toc-s">Dashboard de Métricas · Indicadores de Rendimiento</div></div><div class="toc-d"></div><div class="toc-p">24</div></div>
+    <div class="toc-i"><div class="toc-n">8</div><div class="toc-t"><div class="toc-m">Identidad Visual</div><div class="toc-s">Paleta Cromática · Tipografía · Voz y Tono de Comunicación</div></div><div class="toc-d"></div><div class="toc-p">25</div></div>
+    <div class="toc-i"><div class="toc-n" style="background:linear-gradient(135deg,var(--secondary),#28A745)">C</div><div class="toc-t"><div class="toc-m">Conclusiones</div></div><div class="toc-d"></div><div class="toc-p">26</div></div>
+    <div class="toc-i" style="border-bottom:none"><div class="toc-n" style="background:var(--grad-acc)">B</div><div class="toc-t"><div class="toc-m">Bibliografía</div><div class="toc-s">Referencias en formato APA 7.ª edición</div></div><div class="toc-d"></div><div class="toc-p">28</div></div>
+  </div>
+  <div style="margin:8px 28px">
+    <div class="hl"><p style="margin:0;font-size:8pt;font-style:italic;color:var(--primary-dark)"><strong>Nota sobre el formato:</strong> Este documento sigue las directrices de la 7.ª edición del <em>Publication Manual</em> de la American Psychological Association (APA, 2020). Las citas in‑texto adoptan el formato Autor-Año y la bibliografía aplica sangría francesa.</p></div>
+  </div>
+  <div class="pf"><div>@angelhs.91 · Estrategia de Marca Personal</div><div style="font-weight:600;color:var(--primary)">Cruz de Piedra · CIFP</div><div><span class="pn">i</span></div></div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     PÁG 2 · INTRODUCCIÓN
+══════════════════════════════════════════════════════════════ -->
+<div class="a4">
+  <!-- ★ HEADER ESTÁNDAR CON LOGO IMAGEN ★ -->
+  <div class="ph">
+    <div><img src="avatar.webp" alt="avatar" class="ph-av" onerror="this.outerHTML='<div class=ph-av-fb>Á</div>'"></div>
+    <div class="ph-r"><img src="logo.webp" alt="Cruz de Piedra · CIFP" class="logo-img"></div>
+  </div>
+  <div class="pb">
+    <div class="sb"><div class="stag">01 · Introducción</div><div class="stitle">Punto de <span>Partida</span></div></div>
+
+    <p>En un entorno digital caracterizado por la inmediatez algorítmica y la alta competencia entre creadores de contenido, la construcción de una <strong>marca personal sólida</strong> se ha convertido en un elemento estratégico de diferenciación ineludible. Las plataformas sociales, y especialmente Instagram, permiten a profesionales y creadores comunicar su propuesta de valor de manera visual, conectar emocionalmente con sus audiencias y generar oportunidades tangibles de crecimiento personal y profesional.</p>
+
+    <p>El presente Trabajo Fin de Máster tiene como finalidad analizar exhaustivamente la situación actual de la identidad digital del autor y desarrollar una estrategia de contenidos integral que permita fortalecer su presencia en Instagram (<strong>@angelhs.91</strong>). Este trabajo combina el análisis interno y externo con la definición de una propuesta de valor diferenciada, orientada a posicionarse como creador de contenido gastronómico con un estilo visual propio, auténtico y coherente con las tendencias del mercado.</p>
+
+    <div class="qt"><p>"La importancia de este estudio radica en la creciente demanda de contenidos gastronómicos estéticos, dinámicos y cercanos, así como en el potencial de las marcas personales para generar influencia y oportunidades laborales en la economía del creador digital."</p></div>
+
+    <p>A través de esta investigación se establecen los cimientos para una estrategia de contenidos profesional, sostenible y orientada a resultados medibles, sentando las bases de un ecosistema digital que pueda escalar de forma orgánica y, en el futuro, monetizarse.</p>
+
+    <div class="g2a" style="margin-top:14px">
+      <div>
+        <div class="hl"><h4 style="margin-top:0">Objetivo Estratégico General</h4><p style="margin-bottom:0;font-size:9pt">Fortalecer la presencia en Instagram (<strong>@angelhs.91</strong>) y convertir la marca personal en un referente en el mundo de la gastronomía y el estilo de vida en Canarias, a través de una estrategia de contenidos creativa y auténtica que permita ganar visibilidad, diferenciarse de la competencia y aportar valor a la audiencia.</p></div>
+        <h4>Objetivos Específicos</h4>
+        <ol class="nl">
+          <li>Analizar en profundidad la identidad digital, recursos y percepción actual para detectar fortalezas y áreas de mejora en la presencia en Instagram.</li>
+          <li>Estudiar el entorno externo, incluyendo las tendencias del mercado, las características del público objetivo y la competencia, para entender mejor en qué nicho se puede destacar.</li>
+          <li>Diseñar una propuesta de valor y una voz de marca que reflejen el estilo personal y que conecten emocionalmente con la audiencia.</li>
+          <li>Definir metas claras y medibles (KPIs SMART) para incrementar el número de seguidores, mejorar el <em>engagement</em> y publicar contenidos de calidad de forma constante.</li>
+          <li>Establecer un plan estratégico que incluya contenidos visuales y de valor, aprovechando las tendencias actuales en contenidos digitales (como Reels y <em>Social SEO</em>).</li>
+          <li>Implementar y evaluar la estrategia, ajustando las acciones según los resultados obtenidos, para asegurar un crecimiento sostenido y una mayor visibilidad en Instagram.</li>
+        </ol>
+      </div>
+      <div>
+        <div class="fig">
+          <div class="fn">Figura 1</div>
+          <div class="ft">Ángel Jesús Hernández Santana durante una sesión de producción de contenido gastronómico</div>
+          <img src="figura_1.webp" alt="Ángel grabando contenido" onerror="this.style.background='#eee';this.style.minHeight='200px'">
+          <div class="fnote"><em>Nota.</em> Fotografía del autor durante una sesión de producción de contenido visual. Elaboración propia.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pf"><div>Ángel Jesús Hernández Santana · 15/12/2025</div><div>@angelhs.91</div><div><span class="pn">2</span></div></div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     PÁG 3 · INVESTIGACIÓN INTERNA: IDENTIDAD Y RECURSOS
+══════════════════════════════════════════════════════════════ -->
+<div class="a4">
+  <div class="ph"><div><img src="avatar.webp" alt="" class="ph-av" onerror="this.outerHTML='<div class=ph-av-fb>Á</div>'"></div><div class="ph-r"><img src="logo.webp" alt="Cruz de Piedra · CIFP" class="logo-img"></div></div>
+  <div class="pb">
+    <div class="sb"><div class="stag">02 · Investigación Interna</div><div class="stitle">Identidad, Recursos y <span>Diagnóstico</span></div></div>
+
+    <h3>2.1 Identidad de Marca Personal</h3>
+    <p>La base de toda estrategia de contenidos es la identidad de marca, que en este caso se centra en la gastronomía y el estilo visual, con un enfoque en autenticidad y cercanía. La misión es demostrar valor profesional a través de contenido gastronómico creativo y visualmente atractivo, que refleje tanto recetas sencillas como la presencia física del autor, transmitiendo confianza y autenticidad (Boyd &amp; Ellison, 2007).</p>
+
+    <div class="g3" style="margin-bottom:12px">
+      <div class="card card-top" style="text-align:center;padding:12px"><span class="ci">🧭</span><h4 style="margin-top:0;color:var(--primary)">Misión</h4><p style="font-size:8pt;text-align:center;margin:0">Demostrar valor profesional a través de contenido gastronómico creativo y visualmente atractivo, transmitiendo confianza y autenticidad.</p></div>
+      <div class="card card-dark" style="text-align:center;padding:12px"><span class="ci">🔭</span><h4 style="margin-top:0">Visión</h4><p style="font-size:8pt;text-align:center;margin:0">Convertirse en referente de <em>lifestyle</em> gastronómico en Canarias en los próximos 3–5 años, promoviendo un estilo de vida saludable, cercano y estético.</p></div>
+      <div class="card" style="text-align:center;padding:12px;background:linear-gradient(135deg,#FFF8F0,#FFE8D0);border-top:3px solid var(--accent)"><span class="ci">⭐</span><h4 style="margin-top:0;color:var(--accent)">Valores</h4><p style="font-size:8pt;text-align:center;margin:0;font-weight:700;color:var(--text)">Creatividad · Constancia · Autenticidad · Cercanía · Profesionalidad</p></div>
+    </div>
+
+    <div class="fig">
+      <div class="fn">Figura 2</div>
+      <div class="ft">Representación visual de los tres pilares identitarios de la marca @angelhs.91</div>
+      <img src="img_pilares.webp" alt="Pilares de Misión, Visión y Valores" onerror="this.style.background='#eee';this.style.minHeight='160px'">
+      <div class="fnote"><em>Nota.</em> Elaboración propia. Visualización de misión, visión y valores sobre los que se construye la arquitectura estratégica de la marca personal, con referencia al paisaje canario como ancla territorial.</div>
+    </div>
+
+    <div class="div"><span></span></div>
+
+    <h3>2.2 Recursos Disponibles</h3>
+    <p>Los recursos disponibles para la implementación de la estrategia se clasifican en tres categorías. Cabe destacar que formatos como Instagram Reels requieren pocos recursos técnicos adicionales; estudios recientes muestran que las empresas aumentaron en 2023 un <strong>57,4%</strong> el uso de Reels, confirmando que incluso con recursos modestos se puede generar alto impacto adoptando formatos dinámicos (Sisova, 2023).</p>
+
+    <div class="g3" style="gap:8px">
+      <div class="card card-warm" style="padding:11px"><span class="ci">🧠</span><h4 style="margin-top:0;color:var(--tierra)">Capital Humano</h4><ul class="bl" style="font-size:8pt"><li>Formación en Administración de Empresas</li><li>Experiencia en gestión de proyectos</li><li>Sólidas habilidades comunicativas</li><li>Conocimiento culinario genuino</li><li>Pasión por la gastronomía local canaria</li></ul></div>
+      <div class="card card-teal" style="padding:11px"><span class="ci">📷</span><h4 style="margin-top:0;color:#0A6E3E">Capital Tecnológico</h4><ul class="bl" style="font-size:8pt"><li>Smartphone gama media-alta</li><li>Cámara fotográfica DSLR</li><li>GoPro Hero 4</li><li>Ordenador con Adobe Creative Suite</li><li>Perfil activo en Instagram</li></ul></div>
+      <div class="card card-top" style="padding:11px"><span class="ci">💰</span><h4 style="margin-top:0">Capital Financiero</h4><ul class="bl" style="font-size:8pt"><li>Presupuesto inicial <em>bootstrap</em> (limitado)</li><li>Prioridad: contenido orgánico</li><li>Herramientas gratuitas / low-cost</li><li>Monetización futura vía colaboraciones</li></ul></div>
+    </div>
+  </div>
+  <div class="pf"><div>Ángel Jesús Hernández Santana · 15/12/2025</div><div>@angelhs.91</div><div><span class="pn">3</span></div></div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     PÁG 4 · IMAGEN ACTUAL Y DAFO INTERNO
+══════════════════════════════════════════════════════════════ -->
+<div class="a4">
+  <div class="ph"><div><img src="avatar.webp" alt="" class="ph-av" onerror="this.outerHTML='<div class=ph-av-fb>Á</div>'"></div><div class="ph-r"><img src="logo.webp" alt="Cruz de Piedra · CIFP" class="logo-img"></div></div>
+  <div class="pb-c">
+    <h3>2.3 Imagen Actual y Reputación</h3>
+    <p>Actualmente, la cuenta de Instagram (<strong>@angelhs.91</strong>) presenta un patrón de publicación esporádico con contenido de temática personal. Si bien la audiencia inicial reconoce autenticidad y estética cuidada en las publicaciones, la irregularidad en la frecuencia constituye una debilidad estratégica que limita tanto el crecimiento de seguidores como la efectividad del algoritmo de la plataforma (Sisova, 2023). La presencia es relativamente incipiente y el nivel de engagement bajo, situación que coincide con la literatura sobre branding personal: la irregularidad en la publicación y la falta de interacción proactiva tiende a frenar el crecimiento de la audiencia.</p>
+    <p>En particular, se observa que no se han implementado calendario editorial ni acciones recurrentes de engagement (como preguntas, encuestas o respuestas frecuentes a comentarios). Estudios de caso en influencers gastronómicos indican que muchos creadores de contenido no aprovechan plenamente las capacidades de diálogo con sus seguidores, lo cual constituye una debilidad interna significativa. La audiencia inicial muestra interés en contenidos de recetas fáciles y estética cuidada, lo cual está alineado con las tendencias actuales del mercado y sugiere una oportunidad de potenciar el aspecto visual y cercano del contenido.</p>
+
+    <div class="g4" style="margin:10px 0">
+      <div class="stat"><div class="sn">204</div><div class="sl">Seguidores</div><div class="ss">↑ +5 recientes</div></div>
+      <div class="stat"><div class="sn">9.56%</div><div class="sl">Engagement</div><div class="ss">✓ Buen nivel</div></div>
+      <div class="stat"><div class="sn">2.51%</div><div class="sl">Aumento Seg.</div><div class="ss">↑ Excelente</div></div>
+      <div class="stat"><div class="sn">19</div><div class="sl">Likes / Post</div><div class="ss">promedio</div></div>
+    </div>
+
+    <div class="g2" style="gap:10px;margin-bottom:12px">
+      <div class="fig" style="margin:0">
+        <div class="fn">Figura 3</div>
+        <div class="ft">Auditoría del perfil @angelhs.91 en Hype Auditor</div>
+        <img src="figura_3.webp" alt="Dashboard Hype Auditor" onerror="this.style.background='#eee';this.style.minHeight='90px'">
+        <div class="fnote"><em>Nota.</em> Datos extraídos de Hafi.pro (https://app.hafi.pro/es/). Última actualización: 1 dic. 2025.</div>
+      </div>
+      <div class="fig" style="margin:0">
+        <div class="fn">Figura 4</div>
+        <div class="ft">Benchmarking de Engagement Rate vs. media del sector</div>
+        <img src="figura_4.webp" alt="Tasa de Engagement 9.5%" onerror="this.style.background='#eee';this.style.minHeight='90px'">
+        <div class="fnote"><em>Nota.</em> La tasa del 9,5% supera ampliamente la media del sector de micro-influencers (3-5%).</div>
+      </div>
+    </div>
+
+    <h3>2.4 DAFO Interno</h3>
+    <p>Este análisis permite sintetizar los elementos clave que deben potenciarse o mejorarse. Estudios demuestran que el uso de contenido visual atractivo (vídeos, infografías) incrementa la participación de la audiencia, y que los vídeos obtienen un engagement significativamente mayor que las imágenes fijas (Rahman et al., 2022). La limitada interacción bidireccional con los seguidores es una debilidad que debe corregirse, dado que la construcción de comunidad depende de fomentar el diálogo con la audiencia.</p>
+
+    <div class="dafo">
+      <div class="dc df"><h4>💪 FORTALEZAS</h4><ul><li>Creatividad en la creación de contenido</li><li>Estética visual cuidada y coherente</li><li>Valores personales bien definidos</li><li>Engagement rate superior a la media (9,5%)</li><li>Conocimiento culinario genuino</li><li>Vinculación genuina con Canarias</li></ul></div>
+      <div class="dc dd"><h4>⚠️ DEBILIDADES</h4><ul><li>Falta de constancia en publicaciones</li><li>Sin calendario editorial definido</li><li>Escasas acciones de engagement directo</li><li>Baja visibilidad fuera de la red inicial</li><li>Limitada interacción bidireccional</li><li>Presupuesto financiero limitado</li></ul></div>
+      <div class="dc do"><h4>🚀 OPORTUNIDADES</h4><ul><li>Auge del branding personal auténtico</li><li>Crecimiento del formato Reels en 2023 (+57,4%)</li><li>Interés creciente por gastronomía local</li><li>Herramientas de IA para contenidos</li><li>Apoyo institucional canario a gastronomía</li></ul></div>
+      <div class="dc da"><h4>🛡️ AMENAZAS</h4><ul><li>Saturación de perfiles gastronómicos</li><li>Cambios frecuentes en el algoritmo</li><li>Competidores con mayor presupuesto</li><li>Regulación creciente de influencers</li></ul></div>
+    </div>
+  </div>
+  <div class="pf"><div>Ángel Jesús Hernández Santana · 15/12/2025</div><div>@angelhs.91</div><div><span class="pn">4</span></div></div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     PÁG 5 · PESTEL (1): POLÍTICO, ECONÓMICO, SOCIOCULTURAL
+══════════════════════════════════════════════════════════════ -->
+<div class="a4">
+  <div class="ph"><div><img src="avatar.webp" alt="" class="ph-av" onerror="this.outerHTML='<div class=ph-av-fb>Á</div>'"></div><div class="ph-r"><img src="logo.webp" alt="Cruz de Piedra · CIFP" class="logo-img"></div></div>
+  <div class="pb">
+    <div class="sb"><div class="stag">03 · Investigación Externa</div><div class="stitle">Análisis del Entorno <span>PESTEL</span></div></div>
+    <p>El análisis PESTEL permite identificar los factores macroeconómicos que condicionan el desarrollo de la marca personal @angelhs.91. Comprender este entorno es vital para alinear la estrategia de contenidos con la realidad política, económica, social, tecnológica, ecológica y legal de Canarias y España.</p>
+
+    <div class="pr">
+      <div class="pb2 p-p">P</div>
+      <div class="pc">
+        <h4>1. Entorno Político</h4>
+        <p>El contexto político actual ofrece un marco de estabilidad y apoyo institucional que favorece el emprendimiento digital en el sector turístico-gastronómico.</p>
+        <ul class="bl" style="font-size:8.2pt;margin-bottom:4px">
+          <li><strong>Transformación Digital:</strong> El gobierno de España impulsa la agenda "España Digital", alineándose con la UE para fomentar la digitalización, creando infraestructuras propicias para proyectos en plataformas sociales (European Commission, 2024).</li>
+          <li><strong>Apoyo al Binomio Turismo-Gastronomía:</strong> Las instituciones canarias han priorizado la gastronomía como eje estratégico. Proyectos como "Crecer Juntos" (FITUR 2024) buscan convertir a Canarias en un destino gastronómico de primer nivel. A nivel nacional, el Plan Turístico de Enogastronomía refuerza esta visión (Turismo de España, 2024).</li>
+        </ul>
+        <div class="pimp"><strong>Implicación estratégica:</strong> Existe una oportunidad clara de alineamiento institucional. La marca puede posicionarse en sintonía con campañas públicas, facilitando futuras colaboraciones con Cabildos o Turismo de Canarias.</div>
+      </div>
+    </div>
+
+    <div class="pr">
+      <div class="pb2 p-e">E</div>
+      <div class="pc">
+        <h4>2. Entorno Económico</h4>
+        <ul class="bl" style="font-size:8.2pt;margin-bottom:4px">
+          <li><strong>Resiliencia del Turismo en Canarias:</strong> Motor del 35% del PIB regional, con más de 14 millones de turistas extranjeros en 2023 (Cámara de Comercio de Canarias, 2024), asegurando demanda activa de experiencias de ocio y restauración.</li>
+          <li><strong>Inversión en Marketing de Influencia:</strong> Las marcas españolas están aumentando sus presupuestos para influencers entre un 20% y un 50% proyectado para 2026 (Ministerio de Industria, 2024), situando a España a la vanguardia europea.</li>
+          <li><strong>Auge del E-commerce Alimentario:</strong> Las ventas online de alimentación están en expansión, acostumbrando al usuario a descubrir y adquirir productos gastronómicos a través de canales digitales.</li>
+        </ul>
+        <div class="pimp"><strong>Implicación estratégica:</strong> El mercado es económicamente viable. La estrategia debe orientarse a la profesionalización para captar parte de esta inversión publicitaria creciente.</div>
+      </div>
+    </div>
+
+    <div class="pr">
+      <div class="pb2 p-s">S</div>
+      <div class="pc">
+        <h4>3. Entorno Sociocultural</h4>
+        <ul class="bl" style="font-size:8.2pt;margin-bottom:4px">
+          <li><strong>Penetración de Redes Sociales:</strong> España cuenta con casi 40 millones de usuarios activos. Instagram se consolida como la plataforma preferida para seguir a influencers (49% de los usuarios), especialmente en el rango 25-40 años (IAB Spain, 2024).</li>
+          <li><strong>Cambio en el Aprendizaje Culinario:</strong> El 44% de los jóvenes españoles aprende a cocinar mediante redes sociales, desplazando a los recetarios tradicionales. Un 27% decide qué comer basándose en recomendaciones de influencers (Rodríguez Gómez &amp; García Jiménez, 2021).</li>
+          <li><strong>Valoración de lo Local:</strong> Tanto residentes como turistas buscan experiencias "auténticas". Existe una comunidad social activa que valora el descubrimiento de guachinches, productos km0 y tradiciones locales.</li>
+        </ul>
+        <div class="pimp"><strong>Implicación estratégica:</strong> La marca @angelhs.91 responde a una necesidad social real. El contenido debe mantener un tono cercano y educativo para conectar con esta audiencia que confía en los creadores digitales como prescriptores gastronómicos.</div>
+      </div>
+    </div>
+
+    <div class="g3" style="margin-top:12px;gap:8px">
+      <div class="ms"><div class="msp">44%</div><div class="msd">de jóvenes españoles aprende a cocinar por redes sociales</div></div>
+      <div class="ms" style="background:linear-gradient(135deg,#0A6E3E,#28A745)"><div class="msp">27%</div><div class="msd">decide qué comer basándose en influencers</div></div>
+      <div class="ms" style="background:linear-gradient(135deg,#BF360C,#FF6B35)"><div class="msp">60%</div><div class="msd">ha descubierto nuevos restaurantes vía redes sociales</div></div>
+    </div>
+  </div>
+  <div class="pf"><div>Ángel Jesús Hernández Santana · 15/12/2025</div><div>@angelhs.91</div><div><span class="pn">5</span></div></div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     PÁG 6 · PESTEL (2): TECNOLÓGICO, ECOLÓGICO, LEGAL
+══════════════════════════════════════════════════════════════ -->
+<div class="a4">
+  <div class="ph"><div><img src="avatar.webp" alt="" class="ph-av" onerror="this.outerHTML='<div class=ph-av-fb>Á</div>'"></div><div class="ph-r"><img src="logo.webp" alt="Cruz de Piedra · CIFP" class="logo-img"></div></div>
+  <div class="pb">
+    <div class="pr">
+      <div class="pb2 p-t">T</div>
+      <div class="pc">
+        <h4>4. Entorno Tecnológico</h4>
+        <p>La infraestructura tecnológica de España facilita el consumo de contenido de alta calidad, mientras que la evolución de las plataformas dicta los formatos a utilizar.</p>
+        <ul class="bl" style="font-size:8.2pt;margin-bottom:4px">
+          <li><strong>Conectividad Líder:</strong> España lidera en la UE en despliegue de fibra óptica y 5G, garantizando que la audiencia pueda consumir vídeo de alta definición y <em>streaming</em> sin barreras (INE, 2024).</li>
+          <li><strong>Dominio del Vídeo Corto (Reels):</strong> Los algoritmos de Instagram priorizan el contenido en vídeo vertical para competir con TikTok. El crecimiento de usuarios de Instagram en 2024 se debe en parte a la adopción de estos formatos dinámicos (Sisova, 2023).</li>
+          <li><strong>Adopción de IA:</strong> El uso de herramientas de Inteligencia Artificial por parte de la población (casi un 38% en 2025) sugiere una audiencia y un entorno de creación tecnológicamente maduros (Hernández et al., 2023).</li>
+        </ul>
+        <div class="pimp"><strong>Implicación estratégica:</strong> Es imperativo dominar la edición de vídeo móvil y adaptarse rápidamente a los cambios del algoritmo. La tecnología no es una barrera, sino un facilitador que exige innovación constante.</div>
+      </div>
+    </div>
+
+    <div class="pr">
+      <div class="pb2 p-ec">E</div>
+      <div class="pc">
+        <h4>5. Entorno Ecológico (Ambiental)</h4>
+        <p>La sostenibilidad ha dejado de ser una tendencia para convertirse en una exigencia del mercado y del destino turístico.</p>
+        <ul class="bl" style="font-size:8.2pt;margin-bottom:4px">
+          <li><strong>Sensibilidad del Viajero:</strong> El 41,9% de los turistas en Canarias está dispuesto a priorizar opciones sostenibles. Las instituciones promueven activamente un turismo responsable (Turismo de Canarias, 2024).</li>
+          <li><strong>Alimentación Sostenible:</strong> Estrategias como "De la granja a la mesa" y la preferencia por productos de temporada y locales reducen la huella de carbono y son apoyadas activamente por el Gobierno de Canarias (FAO, 2023).</li>
+        </ul>
+        <div class="pimp"><strong>Implicación estratégica:</strong> La marca personal debe integrar valores "verdes" de forma transversal. Promover productos locales no solo aporta valor ético, sino que diferencia a la marca de competidores que no tienen en cuenta el impacto ambiental.</div>
+      </div>
+    </div>
+
+    <div class="pr">
+      <div class="pb2 p-l">L</div>
+      <div class="pc">
+        <h4>6. Entorno Legal</h4>
+        <p>El marco regulatorio se está endureciendo para equiparar a los influencers con otros medios de comunicación, exigiendo transparencia y profesionalidad.</p>
+        <ul class="bl" style="font-size:8.2pt;margin-bottom:4px">
+          <li><strong>Regulación de Influencers:</strong> El Real Decreto 444/2024 y la Ley General de Comunicación Audiovisual introducen mayores obligaciones para los creadores de contenido, especialmente aquellos de "especial relevancia" (Ministerio de Consumo, 2025).</li>
+          <li><strong>Transparencia Publicitaria:</strong> El Código de Conducta de 2025 (Autocontrol, 2025) exige identificar claramente la publicidad (etiquetas como <em>#Publicidad</em> o <em>#Colaboración</em>) y prohíbe la publicidad encubierta.</li>
+          <li><strong>Propiedad Intelectual y Datos:</strong> Es crucial el respeto a los derechos de autor (música, imágenes) y el cumplimiento del RGPD en la gestión de datos de la comunidad (Reglamento UE 2016/679, 2016).</li>
+        </ul>
+        <div class="pimp"><strong>Implicación estratégica:</strong> @angelhs.91 debe operar con total transparencia en futuras colaboraciones, etiquetando correctamente el contenido patrocinado y respetando el copyright. Esto construye confianza ante seguidores y marcas.</div>
+      </div>
+    </div>
+
+    <div class="div"><span></span></div>
+
+    <h3>b) Análisis del Mercado</h3>
+    <p>El mercado relevante incluye a todos los usuarios de Instagram interesados en gastronomía y estilo de vida. El público objetivo (<strong>18-40 años</strong>) busca inspiración diaria en alimentación práctica, contenidos auténticos y formatos dinámicos (Reels, Stories) que permitan consumir información de forma rápida. Las tendencias de mercado indican que el contenido breve y visual domina la atención: los vídeos generan tasas de enganche muy superiores a las imágenes estáticas (Rahman et al., 2022). Un 60% de los usuarios ha descubierto nuevos restaurantes a través de plataformas sociales, demostrando el poder de estas herramientas para influir en comportamientos de consumo.</p>
+  </div>
+  <div class="pf"><div>Ángel Jesús Hernández Santana · 15/12/2025</div><div>@angelhs.91</div><div><span class="pn">6</span></div></div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     PÁG 7 · COMPETENCIA Y DAFO EXTERNO
+══════════════════════════════════════════════════════════════ -->
+<div class="a4">
+  <div class="ph"><div><img src="avatar.webp" alt="" class="ph-av" onerror="this.outerHTML='<div class=ph-av-fb>Á</div>'"></div><div class="ph-r"><img src="logo.webp" alt="Cruz de Piedra · CIFP" class="logo-img"></div></div>
+  <div class="pb">
+    <h3>c) Análisis de la Competencia</h3>
+    <p>La competencia se divide en directa e indirecta. Investigaciones demuestran que los perfiles que combinan comida saludable con elementos personales (selfies, vídeos propios) tienden a generar más interacción y lealtad (Visual Publications, 2023). En el segmento saludable, los seguidores son más activos e interactivos que en los perfiles de "comidistas" tradicionales. Reforzar la autenticidad y vincular el mensaje a un estilo de vida puede resultar más efectivo que seguir las fórmulas habituales.</p>
+
+    <div class="fig">
+      <div class="fn">Figura 5</div>
+      <div class="ft">Caracterización del público objetivo de @angelhs.91 (18-40 años): intereses, motivaciones y comportamientos de consumo</div>
+      <img src="figura_5.webp" alt="Diagrama de Público Objetivo" onerror="this.style.background='#eee';this.style.minHeight='130px'">
+      <div class="fnote"><em>Nota.</em> Elaboración propia. Segmentación basada en datos de IAB Spain (2024) y Rodríguez Gómez y García Jiménez (2021).</div>
+    </div>
+
+    <div class="g3" style="margin:10px 0;gap:8px">
+      <div class="card" style="padding:12px;border-left:4px solid var(--primary)"><h4 style="color:var(--primary);margin-top:0">🎯 Competencia Directa</h4><p style="font-size:8.2pt;margin:0">Otros perfiles personales de gastronomía en Instagram, tanto locales como nacionales: chefs, foodies y bloggers que publican recetas, fotos de comida y experiencias culinarias. Cuentas de chefs locales reconocidos o seguidores de tendencias saludables.</p></div>
+      <div class="card" style="padding:12px;border-left:4px solid var(--secondary)"><h4 style="color:#0A6E3E;margin-top:0">🔀 Competencia Indirecta</h4><p style="font-size:8.2pt;margin:0">Influencers de estilo de vida y motivación (bienestar, fitness, viajes) que incluyen ocasionalmente contenido gastronómico. También medios digitales (blogs de recetas o revistas online) que ofrecen contenidos visuales similares.</p></div>
+      <div class="card card-teal" style="padding:12px"><h4 style="color:#0A6E3E;margin-top:0">⚡ Ventaja Competitiva</h4><p style="font-size:8.2pt;margin:0">Presencia física del autor en las publicaciones (no solo fotos de platos, sino el creador en escena), una estética cuidada y coherente, y la vinculación auténtica con la identidad y el producto canario.</p></div>
+    </div>
+
+    <h3>d) DAFO Externo</h3>
+    <div class="g2" style="gap:10px;margin-bottom:12px">
+      <div class="card" style="background:linear-gradient(135deg,#E8FFF5,#D0F5E8);border-top:4px solid #28A745;padding:12px">
+        <h4 style="color:#0A6E3E;font-size:8.5pt;text-transform:uppercase;letter-spacing:.5px;margin-top:0;margin-bottom:6px">🚀 Oportunidades</h4>
+        <ul class="bl" style="font-size:8.2pt"><li>Creciente interés por marcas personales auténticas</li><li>Auge del contenido visual y del formato vídeo corto</li><li>Creciente interés en bienestar y alimentación saludable</li><li>Uso de nuevas herramientas digitales e IA para contenidos interactivos y audiovisuales</li><li>Apoyo institucional canario a la gastronomía local</li></ul>
+      </div>
+      <div class="card" style="background:linear-gradient(135deg,#FFF3E0,#FFE0C0);border-top:4px solid var(--accent);padding:12px">
+        <h4 style="color:#C44B00;font-size:8.5pt;text-transform:uppercase;letter-spacing:.5px;margin-top:0;margin-bottom:6px">⚠️ Amenazas</h4>
+        <ul class="bl" style="font-size:8.2pt"><li>Saturación de perfiles gastronómicos en redes</li><li>Cambios en los algoritmos de Instagram</li><li>Competidores con mayor presupuesto y recursos</li><li>Marco regulatorio más exigente para influencers</li></ul>
+      </div>
+    </div>
+
+    <div class="div"><span></span></div>
+    <div class="sb" style="padding:14px 20px"><div class="stag">04 · Audiencia y Tendencias</div><div class="stitle">Perfiles de Audiencia, <span>Empatía y Tendencias</span></div></div>
+
+    <h3>4.1 Características de los Clientes</h3>
+    <p>El cliente ideal o audiencia objetivo se caracteriza por tres dimensiones fundamentales (Boyd &amp; Ellison, 2007). <strong>Demografía:</strong> hombres y mujeres de 18 a 40 años, mayoritariamente residentes en Canarias o interesados en la gastronomía canaria, aunque abierto a una audiencia hispanohablante más amplia. <strong>Motivaciones:</strong> buscan inspiración en recetas accesibles, guía para un estilo de vida saludable y contenido visual agradable. Valoran la cercanía del creador y la coherencia entre lo que muestran y sus experiencias reales. <strong>Comportamientos:</strong> prefieren plataformas de consumo rápido (Instagram Reels, Stories) y tienden a interactuar cuando los contenidos les ofrecen valor (consejos prácticos, novedades del sector, recomendaciones honestas).</p>
+  </div>
+  <div class="pf"><div>Ángel Jesús Hernández Santana · 15/12/2025</div><div>@angelhs.91</div><div><span class="pn">7</span></div></div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     PÁG 8 · MAPA DE EMPATÍA Y TENDENCIAS
+══════════════════════════════════════════════════════════════ -->
+<div class="a4">
+  <div class="ph"><div><img src="avatar.webp" alt="" class="ph-av" onerror="this.outerHTML='<div class=ph-av-fb>Á</div>'"></div><div class="ph-r"><img src="logo.webp" alt="Cruz de Piedra · CIFP" class="logo-img"></div></div>
+  <div class="pb">
+    <h3>4.2 Mapa de Empatía</h3>
+    <p>Para entender mejor las motivaciones y necesidades de la audiencia, se elabora el siguiente mapa de empatía como herramienta de <em>Design Thinking</em>:</p>
+
+    <div class="emp">
+      <div class="ec e1"><h4>💭 QUÉ PIENSA Y SIENTE</h4><p>Buscan contenidos útiles y recetas accesibles que puedan replicar fácilmente en su día a día. Piensan: "necesito ideas para variar mis comidas, pero que no me tomen demasiado tiempo". Sienten satisfacción cuando encuentran una receta sencilla que les sale bien. Pueden sentir saturación ante tanta información en redes; valoran aquellas cuentas que les aportan un respiro auténtico e inspiración real.</p></div>
+      <div class="ec e2"><h4>👁️ QUÉ VE</h4><p>Una saturación creciente de perfiles gastronómicos en redes sociales. Publicaciones muy producidas que parecen inalcanzables. Pocos creadores que mezclen gastronomía local con personalidad auténtica y presencia física genuina. Cada vez más contenido de recetas rápidas y saludables en su feed.</p></div>
+      <div class="ec e3"><h4>👂 QUÉ ESCUCHA</h4><p>Recomendaciones de cocina rápida, hábitos saludables y tendencias audiovisuales. Conversaciones sobre sostenibilidad, producto local y km0. Podcasts y stories sobre lifestyle. Opiniones de amigos sobre restaurantes descubiertos en Instagram. Tendencias sobre bienestar y alimentación consciente.</p></div>
+      <div class="ec e4"><h4>🗣️ QUÉ DICE Y HACE</h4><p>Consume vídeos cortos, guarda publicaciones, comparte recetas y sigue perfiles con los que siente cercanía emocional. Participa activamente en comunidades gastronómicas online cuando percibe autenticidad (compartiendo sus propias creaciones tras inspirarse en el creador).</p></div>
+    </div>
+
+    <div class="fig">
+      <div class="fn">Figura 6</div>
+      <div class="ft">Mapa de empatía de la audiencia objetivo de @angelhs.91</div>
+      <img src="figura_6.webp" alt="Mapa de Empatía" onerror="this.style.background='#eee';this.style.minHeight='100px'">
+      <div class="fnote"><em>Nota.</em> Herramienta de Design Thinking para comprender los dolores y motivaciones del usuario frente al contenido gastronómico en redes sociales. Elaboración propia.</div>
+    </div>
+
+    <h3>4.3 Resumen de Características de la Competencia</h3>
+    <p>La competencia directa está formada por creadores gastronómicos que comparten recetas y contenido visual similar. La competencia indirecta incluye perfiles de lifestyle, salud y motivación. La diferenciación se logrará mediante una propuesta estética cuidada, autenticidad en la comunicación y la combinación de gastronomía con estilo personal propio de las Islas Canarias.</p>
+
+    <div class="g2" style="gap:8px">
+      <div class="hl-acc"><p style="margin:0;font-size:8.5pt"><strong>Directa:</strong> Otros creadores gastronómicos en Instagram (chefs, foodies, bloggers locales y nacionales).</p></div>
+      <div class="hl"><p style="margin:0;font-size:8.5pt"><strong>Indirecta:</strong> Perfiles de lifestyle, motivación visual, bienestar y fitness que incluyen contenido gastronómico ocasionalmente.</p></div>
+    </div>
+    <div class="hl" style="margin-top:8px"><p style="margin:0;font-size:8.5pt;color:var(--primary-dark)"><strong>Oportunidad:</strong> Diferenciarse mostrando presencia física del creador en escena, estética cuidada y orgullo de identidad canaria (producto km0, guachinches, tradiciones locales).</p></div>
+
+    <h3>4.4 Resumen de Tendencias Digitales</h3>
+    <ul class="bl">
+      <li><strong>Vídeo corto y Reels:</strong> El formato de vídeo breve sigue en alza. Las marcas han comprobado que los vídeos cortos captan la atención inicial (primeros 1-4 segundos) y facilitan el engagement (Sisova, 2023).</li>
+      <li><strong>Contenido visual atractivo:</strong> Los vídeos obtienen más interacción que las imágenes fijas, incluso superando las fotos con personas. Las publicaciones que incorporan texto informativo obtienen respuesta positiva (Rahman et al., 2022).</li>
+      <li><strong>Autenticidad y narrativas personales:</strong> Pocos influencers aprovechan al máximo el diálogo con su audiencia. Fomentar la conversación es tendencia clave para construir comunidad (Boyd &amp; Ellison, 2007).</li>
+      <li><strong>Temas de bienestar:</strong> Los seguidores de contenidos enfocados en alimentación saludable tienden a interactuar más (Navarro-Beltrá &amp; Herrero, 2023).</li>
+      <li><strong>Comunidades en redes sociales:</strong> El engagement es la métrica clave. Estrategias de co-creación y hashtags propios fortalecen la comunidad online.</li>
+    </ul>
+  </div>
+  <div class="pf"><div>Ángel Jesús Hernández Santana · 15/12/2025</div><div>@angelhs.91</div><div><span class="pn">8</span></div></div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     PÁG 9 · SÍNTESIS ESTRATÉGICA
+══════════════════════════════════════════════════════════════ -->
+<div class="a4">
+  <div class="ph"><div><img src="avatar.webp" alt="" class="ph-av" onerror="this.outerHTML='<div class=ph-av-fb>Á</div>'"></div><div class="ph-r"><img src="logo.webp" alt="Cruz de Piedra · CIFP" class="logo-img"></div></div>
+  <div class="pb">
+    <div class="sb"><div class="stag">05 · Síntesis Estratégica</div><div class="stitle">Marco Estratégico de <span>Marca</span></div></div>
+
+    <h3>5.1 Marco Estratégico Básico</h3>
+    <p>Aplicando las herramientas del análisis estratégico (misión, visión, valores, ventaja competitiva, propuesta de valor, posicionamiento y buyer persona), se concreta la estrategia integral de la marca:</p>
+
+    <div class="card card-top" style="padding:14px;margin-bottom:12px">
+      <div class="sr"><div class="slbl">MISIÓN</div><div class="sval">Mostrar valor pasional a través de contenido gastronómico y lifestyle cercano, transmitiendo confianza y autenticidad en cada publicación.</div></div>
+      <div class="sr"><div class="slbl">VISIÓN</div><div class="sval">Convertirse en referente en lifestyle gastronómico en Canarias en los próximos 3–5 años, promoviendo un estilo de vida saludable, cercano y estético.</div></div>
+      <div class="sr"><div class="slbl">VALORES</div><div class="sval">Creatividad · Autenticidad · Cercanía · Constancia · Profesionalismo</div></div>
+      <div class="sr"><div class="slbl">VENTAJA COMP.</div><div class="sval">Presencia física del autor en las publicaciones y estética cuidada, diferenciándose mediante autenticidad y estilo propio vinculado a Canarias.</div></div>
+      <div class="sr"><div class="slbl">PROPUESTA VALOR</div><div class="sval">Recetas sencillas con estética cuidada que reflejen profesionalidad y autenticidad, combinando gastronomía local con recomendaciones de lifestyle.</div></div>
+      <div class="sr"><div class="slbl">POSICIONAMIENTO</div><div class="sval">Creador de contenido cercano, auténtico y visualmente impactante, referente gastronómico en el ecosistema digital canario.</div></div>
+      <div class="sr" style="border-bottom:none"><div class="slbl">BUYER PERSONA</div><div class="sval">Un joven entusiasta de la gastronomía, cercano, creativo y con interés en estilos de vida saludables, residente en Canarias o con conexión a las islas.</div></div>
+    </div>
+
+    <h3>5.2 Propuesta de Voz de Marca</h3>
+    <p>La voz de marca se definirá como cercana, didáctica y creativa. La narrativa combinará el entusiasmo propio de un apasionado por la gastronomía con consejos prácticos. Se empleará un lenguaje claro y motivador (incluso coloquial) para generar empatía. Al usar Instagram Stories y Reels, el tono será espontáneo y auténtico, como sugieren los estudios de marketing de influencers (Brickner, 2023). Este estilo abierto invita al diálogo y contribuye a generar confianza y sentido de comunidad.</p>
+
+    <div class="g3" style="gap:8px">
+      <div class="voz" style="flex-direction:column;align-items:center;text-align:center;display:flex"><div class="vozi">🤝</div><div><div class="vozl">Cercana</div><p class="vozd">Hablamos de tú a tú. Conectamos emocionalmente, acogemos y compartimos conocimiento con naturalidad.</p></div></div>
+      <div class="voz" style="flex-direction:column;align-items:center;text-align:center;display:flex"><div class="vozi">📚</div><div><div class="vozl">Didáctica</div><p class="vozd">Enseñamos con claridad y rigor. Facilitamos el aprendizaje de técnicas y tradiciones gastronómicas canarias.</p></div></div>
+      <div class="voz" style="flex-direction:column;align-items:center;text-align:center;display:flex"><div class="vozi">🌿</div><div><div class="vozl">Auténtica Km0</div><p class="vozd">Fieles a nuestras raíces. Usamos ingredientes locales y técnicas tradicionales de las Islas Canarias.</p></div></div>
+    </div>
+
+    <h3>5.3 Propuesta de Valor</h3>
+    <div class="card card-grad" style="padding:18px">
+      <p style="font-size:10.5pt;font-weight:600;color:#fff;margin-bottom:8px;font-family:'Montserrat',sans-serif">"Gastronomía accesible con estilo de vida saludable"</p>
+      <p style="color:rgba(255,255,255,.85);font-size:9pt;margin-bottom:10px">Ofrecer contenidos únicos que combinan recetas sencillas y sabrosas con recomendaciones de lifestyle. Se destacará la autenticidad del creador mostrando su contexto canario, aprovechando el valor simbólico de la comida local como elemento diferenciador. Este posicionamiento aporta valor a la audiencia al proveer inspiración diaria realista y atractiva, distinguiendo claramente la marca de la competencia más generalista.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:5px">
+        <span style="background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);border-radius:15px;padding:3px 10px;font-size:7pt;font-weight:700;color:#fff;font-family:'Montserrat',sans-serif">🍽️ Recetas Accesibles</span>
+        <span style="background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);border-radius:15px;padding:3px 10px;font-size:7pt;font-weight:700;color:#fff;font-family:'Montserrat',sans-serif">🌿 Producto Km0</span>
+        <span style="background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);border-radius:15px;padding:3px 10px;font-size:7pt;font-weight:700;color:#fff;font-family:'Montserrat',sans-serif">📸 Estética Visual</span>
+        <span style="background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);border-radius:15px;padding:3px 10px;font-size:7pt;font-weight:700;color:#fff;font-family:'Montserrat',sans-serif">🏝️ Identidad Canaria</span>
+        <span style="background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);border-radius:15px;padding:3px 10px;font-size:7pt;font-weight:700;color:#fff;font-family:'Montserrat',sans-serif">💬 Autenticidad</span>
+      </div>
+    </div>
+  </div>
+  <div class="pf"><div>Ángel Jesús Hernández Santana · 15/12/2025</div><div>@angelhs.91</div><div><span class="pn">9</span></div></div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     PÁG 10 · DAFO DIGITAL Y KPIs SMART
+══════════════════════════════════════════════════════════════ -->
+<div class="a4">
+  <div class="ph"><div><img src="avatar.webp" alt="" class="ph-av" onerror="this.outerHTML='<div class=ph-av-fb>Á</div>'"></div><div class="ph-r"><img src="logo.webp" alt="Cruz de Piedra · CIFP" class="logo-img"></div></div>
+  <div class="pb-c">
+    <h3>5.4 DAFO Digital</h3>
+    <div class="dafo" style="margin-bottom:12px">
+      <div class="dc df"><h4>💪 FORTALEZAS</h4><ul><li>Creatividad, estética visual cuidada, autenticidad</li><li>Capacidad de comunicación y engagement natural</li><li>Engagement rate del 9,5% muy por encima de la media</li></ul></div>
+      <div class="dc dd"><h4>⚠️ DEBILIDADES</h4><ul><li>Falta de constancia en publicaciones</li><li>Baja visibilidad fuera de Instagram</li><li>Recursos financieros limitados para Paid Media</li></ul></div>
+      <div class="dc do"><h4>🚀 OPORTUNIDADES</h4><ul><li>Auge del branding personal auténtico</li><li>Interés creciente por contenido gastronómico local</li><li>Expansión del formato vídeo corto (Reels)</li></ul></div>
+      <div class="dc da"><h4>🛡️ AMENAZAS</h4><ul><li>Saturación de perfiles gastronómicos</li><li>Cambios en algoritmos de redes sociales</li><li>Competencia creciente y más profesionalizada</li></ul></div>
+    </div>
+
+    <div class="fig" style="margin-bottom:12px">
+      <div class="fn">Figura 7</div>
+      <div class="ft">Representación visual del DAFO Digital consolidado de @angelhs.91</div>
+      <img src="figura_7.webp" alt="DAFO Digital" onerror="this.style.background='#eee';this.style.minHeight='120px'">
+      <div class="fnote"><em>Nota.</em> Síntesis visual de los hallazgos internos y externos aplicados a la estrategia de contenidos digitales. Elaboración propia.</div>
+    </div>
+
+    <h3>5.5 Objetivos (KPI SMART)</h3>
+    <p>Estos objetivos permitirán evaluar el progreso y ajustar las acciones en función de los resultados. Cada KPI es Específico, Medible, Alcanzable, Relevante y con límite Temporal (IAB Spain, 2024):</p>
+
+    <div class="g2" style="gap:10px">
+      <div>
+        <div class="kc"><div class="ki" style="background:var(--grad-b)">👥</div><div><div class="kv">+25%</div><div class="kn">Crecimiento de Seguidores</div><div class="kd">Incrementar la comunidad en Instagram en 6 meses</div><div class="kb"><div class="kbf" style="width:25%"></div></div></div></div>
+        <div class="kc"><div class="ki" style="background:linear-gradient(135deg,#0A6E3E,#28A745)">📊</div><div><div class="kv">10%</div><div class="kn">Tasa de Engagement Rate</div><div class="kd">Alcanzar el 10% mensual, superando la media del sector (3-5%)</div><div class="kb"><div class="kbf" style="width:70%;background:linear-gradient(90deg,#0A6E3E,#28A745)"></div></div></div></div>
+        <div class="kc"><div class="ki" style="background:var(--grad-acc)">🔖</div><div><div class="kv">+15%</div><div class="kn">Índice de Utilidad (Saves)</div><div class="kd">Aumentar guardados en publicaciones en 4 meses</div><div class="kb"><div class="kbf" style="width:15%;background:var(--grad-acc)"></div></div></div></div>
+      </div>
+      <div>
+        <div class="kc"><div class="ki" style="background:linear-gradient(135deg,#1565C0,#2196F3)">📅</div><div><div class="kv">3/sem</div><div class="kn">Frecuencia de Publicación</div><div class="kd">Mínimo 3 publicaciones semanales: 2 Reels + 1 estática</div><div class="kb"><div class="kbf" style="width:60%;background:linear-gradient(90deg,#1565C0,#2196F3)"></div></div></div></div>
+        <div class="kc"><div class="ki" style="background:linear-gradient(135deg,#9B3700,#F7C948)">🤝</div><div><div class="kv">2</div><div class="kn">Colaboraciones Estratégicas</div><div class="kd">Generar al menos 2 colaboraciones con marcas o creadores locales en 6 meses</div><div class="kb"><div class="kbf" style="width:40%;background:linear-gradient(90deg,#9B3700,#F7C948)"></div></div></div></div>
+
+        <div class="fig" style="margin-top:10px">
+          <div class="fn">Figura 8</div>
+          <div class="ft">Representación visual de los objetivos KPI SMART de @angelhs.91</div>
+          <img src="figura_8.webp" alt="Panel KPIs SMART" onerror="this.style.background='#eee';this.style.minHeight='100px'">
+          <div class="fnote"><em>Nota.</em> Elaboración propia.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pf"><div>Ángel Jesús Hernández Santana · 15/12/2025</div><div>@angelhs.91</div><div><span class="pn">10</span></div></div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     PÁG 11 · PLAN DE MEDIOS: ECOSISTEMA DIGITAL
+══════════════════════════════════════════════════════════════ -->
+<div class="a4">
+  <div class="ph"><div><img src="avatar.webp" alt="" class="ph-av" onerror="this.outerHTML='<div class=ph-av-fb>Á</div>'"></div><div class="ph-r"><img src="logo.webp" alt="Cruz de Piedra · CIFP" class="logo-img"></div></div>
+  <div class="pb">
+    <div class="sb"><div class="stag">06 · Plan de Medios</div><div class="stitle">Ecosistema Digital <span>Estratégico</span></div></div>
+
+    <p>El plan de medios de @angelhs.91 se ha diseñado como un ecosistema estratégico orientado a la visibilidad y el posicionamiento profesional en el sector gastronómico de Canarias. La estrategia no se limita a la difusión de contenidos, sino que busca la optimización para el <strong>Social SEO</strong>, facilitando que el algoritmo de búsqueda visual posicione el perfil ante usuarios que buscan activamente inspiración culinaria.</p>
+
+    <div class="fig">
+      <div class="fn">Figura 9</div>
+      <div class="ft">Ecosistema Digital Estratégico de @angelhs.91 con Instagram como motor central y LinkedIn como canal B2B</div>
+      <img src="figura_9.webp" alt="Ecosistema Digital Estratégico" onerror="this.style.background='#eee';this.style.minHeight='160px'">
+      <div class="fnote"><em>Nota.</em> Elaboración propia. Representación de la sinergia entre canales, donde Instagram actúa como el motor central de descubrimiento visual (Social SEO) y LinkedIn como plataforma de expansión para el networking profesional y alianzas B2B en el sector turístico-gastronómico.</div>
+    </div>
+
+    <h3>6.1 Identificación de Canales Digitales</h3>
+    <div class="g2" style="gap:10px">
+      <div class="eco" style="border-top-color:var(--primary)">
+        <span class="ecoi">📸</span>
+        <div class="ecot">Instagram</div>
+        <div class="ecor">Canal Principal · Social SEO</div>
+        <p class="ecod">Entorno natural para el contenido visual dinámico. El 44% de los jóvenes españoles aprende a cocinar mediante esta red social, desplazando a los recetarios tradicionales (Rodríguez Gómez &amp; García Jiménez, 2021).</p>
+        <div style="display:flex;gap:4px;flex-wrap:wrap;justify-content:center;margin-top:7px">
+          <span style="background:#E3F2FD;color:#0D47A1;padding:2px 7px;border-radius:8px;font-size:6.5pt;font-weight:700">📹 Reels</span>
+          <span style="background:#F3E5F5;color:#4A148C;padding:2px 7px;border-radius:8px;font-size:6.5pt;font-weight:700">📊 Carruseles</span>
+          <span style="background:#FFF3E0;color:#E65100;padding:2px 7px;border-radius:8px;font-size:6.5pt;font-weight:700">⚡ Stories</span>
+        </div>
+      </div>
+      <div class="eco" style="border-top-color:#0077B5">
+        <span class="ecoi">💼</span>
+        <div class="ecot">LinkedIn</div>
+        <div class="ecor" style="color:#0077B5">Canal Profesional · Networking B2B</div>
+        <p class="ecod">Canal complementario para potenciar los recursos personales del autor (formación administrativa y gestión de proyectos). Objetivo: networking con agencias y marcas interesadas en el binomio turismo-gastronomía.</p>
+        <div style="display:flex;gap:4px;flex-wrap:wrap;justify-content:center;margin-top:7px">
+          <span style="background:#E3F2FD;color:#0D47A1;padding:2px 7px;border-radius:8px;font-size:6.5pt;font-weight:700">📝 Artículos</span>
+          <span style="background:#F3E5F5;color:#4A148C;padding:2px 7px;border-radius:8px;font-size:6.5pt;font-weight:700">📊 Insights</span>
+          <span style="background:#E8F5E9;color:#1B5E20;padding:2px 7px;border-radius:8px;font-size:6.5pt;font-weight:700">🤝 Network</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="fig">
+      <div class="fn">Figura 10</div>
+      <div class="ft">Guía comparativa de estrategia de contenidos: Instagram vs. LinkedIn</div>
+      <img src="figura_10.webp" alt="Comparativa Instagram vs LinkedIn" onerror="this.style.background='#eee';this.style.minHeight='120px'">
+      <div class="fnote"><em>Nota.</em> Comparativa estratégica de ambas plataformas: propósito, audiencias, tipos de contenido y objetivos clave para la marca @angelhs.91. Elaboración propia.</div>
+    </div>
+  </div>
+  <div class="pf"><div>Ángel Jesús Hernández Santana · 15/12/2025</div><div>@angelhs.91</div><div><span class="pn">11</span></div></div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     PÁG 12 · PILARES DE CONTENIDO
+══════════════════════════════════════════════════════════════ -->
+<div class="a4">
+  <div class="ph"><div><img src="avatar.webp" alt="" class="ph-av" onerror="this.outerHTML='<div class=ph-av-fb>Á</div>'"></div><div class="ph-r"><img src="logo.webp" alt="Cruz de Piedra · CIFP" class="logo-img"></div></div>
+  <div class="pb">
+    <h3>6.2 Planificación de Pilares de Contenido</h3>
+    <p>Para garantizar la coherencia comunicativa y la propuesta de valor, se estructuran cuatro ejes temáticos. Esta distribución responde a las necesidades detectadas en el mapa de empatía de la audiencia y cubre todas las fases del embudo de conversión:</p>
+
+    <div class="g2" style="gap:10px;margin-bottom:12px">
+      <div class="pil pil1"><div class="piln">1</div><div style="font-size:16pt;margin-bottom:4px">🍳</div><div class="pilt">Recetas Funcionales</div><div class="pils">Utilidad y Sencillez</div><p class="pild">Contenido útil y accesible para combatir la saturación informativa que siente el usuario. Recetas sencillas que cualquiera puede replicar en casa, con ingredientes del mercado local canario. Combate el "¿qué cocino hoy?".</p></div>
+      <div class="pil pil2"><div class="piln">2</div><div style="font-size:16pt;margin-bottom:4px">🌿</div><div class="pilt">Lifestyle y Bienestar</div><div class="pils">Tendencia Saludable</div><p class="pild">Alineado con la tendencia de alimentación saludable que reporta mayores tasas de interacción (Navarro-Beltrá &amp; Herrero, 2023). Estilo de vida equilibrado y estético vinculado a la cultura canaria.</p></div>
+      <div class="pil pil3"><div class="piln">3</div><div style="font-size:16pt;margin-bottom:4px">🏝️</div><div class="pilt">Identidad Local Canaria</div><div class="pils">Producto Km0</div><p class="pild">Diferenciación basada en el producto km0 y el apoyo institucional a la gastronomía regional. Guachinches, quesos locales, papas arrugadas, productos de temporada y tradiciones isleñas como elementos únicos e irrepetibles.</p></div>
+      <div class="pil pil4"><div class="piln">4</div><div style="font-size:16pt;margin-bottom:4px">📖</div><div class="pilt">Storytelling Personal</div><div class="pils">Autenticidad y Humanización</div><p class="pild">Presencia física del autor para humanizar la marca, factor que genera mayor lealtad que los perfiles "comidistas" tradicionales (Visual Publications, 2023). El creador en escena, contando su historia y proceso creativo.</p></div>
+    </div>
+
+    <div class="fig">
+      <div class="fn">Figura 11</div>
+      <div class="ft">Moodboard conceptual de los cuatro Pilares de Contenido de @angelhs.91</div>
+      <img src="figura_11.webp" alt="Moodboard de Pilares de Contenido" onerror="this.style.background='#eee';this.style.minHeight='160px'">
+      <div class="fnote"><em>Nota.</em> Distribución temática diseñada para equilibrar la utilidad (recetas), la tendencia (bienestar), la diferenciación territorial (identidad canaria) y la humanización de la marca (storytelling), respondiendo a las necesidades detectadas en el mapa de empatía. Elaboración propia.</div>
+    </div>
+  </div>
+  <div class="pf"><div>Ángel Jesús Hernández Santana · 15/12/2025</div><div>@angelhs.91</div><div><span class="pn">12</span></div></div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     PÁG 13 · CALENDARIO EDITORIAL Y LINKEDIN
+══════════════════════════════════════════════════════════════ -->
+<div class="a4">
+  <div class="ph"><div><img src="avatar.webp" alt="" class="ph-av" onerror="this.outerHTML='<div class=ph-av-fb>Á</div>'"></div><div class="ph-r"><img src="logo.webp" alt="Cruz de Piedra · CIFP" class="logo-img"></div></div>
+  <div class="pb-c">
+    <h3>6.3 Calendario Editorial</h3>
+    <p>El calendario se estructura según las fases de relación con el seguidor (embudo de conversión) para optimizar el alcance y la retención. La planificación optimiza el flujo de usuarios desde la atracción orgánica (TOFU) hasta la fidelización (BOFU) a través de narrativas personales y Stories de interacción directa:</p>
+
+    <table class="tbl">
+      <thead><tr><th>Fase del Embudo</th><th>Día</th><th>Formato</th><th>Objetivo Estratégico</th></tr></thead>
+      <tbody>
+        <tr><td><span class="bf bf-t">TOFU · Atracción</span></td><td><strong>Lunes</strong></td><td><span class="bfmt">🎬 Reel Viral</span></td><td>Maximizar el alcance orgánico mediante recetas rápidas de alto impacto visual. Ritmo rápido, estética impactante, retención en los primeros 3 segundos.</td></tr>
+        <tr><td><span class="bf bf-m">MOFU · Consideración</span></td><td><strong>Miércoles</strong></td><td><span class="bfmt">📊 Carrusel SEO</span></td><td>Fomentar "Guardar" y "Compartir". Explicación detallada de ingredientes km0 o técnicas culinarias canarias. Valor educativo.</td></tr>
+        <tr><td><span class="bf bf-b">BOFU · Fidelización</span></td><td><strong>Viernes</strong></td><td><span class="bfmt">🎥 Reel Personal</span></td><td>Narrativa cercana y estilo de vida para fortalecer el vínculo emocional con la comunidad. Creador en escena.</td></tr>
+        <tr><td><span class="bf bf-d">Engagement · Diario</span></td><td><strong>Lunes-Domingo</strong></td><td><span class="bfmt">⚡ Stories</span></td><td>Interacción bidireccional mediante encuestas y preguntas para corregir la baja interacción previa detectada. Mantener la visibilidad diaria.</td></tr>
+      </tbody>
+    </table>
+
+    <div class="fig">
+      <div class="fn">Figura 12</div>
+      <div class="ft">Tabla de Planificación Editorial Dinámica alineada al Embudo de Conversión (TOFU-MOFU-BOFU)</div>
+      <img src="figura_12.webp" alt="Calendario Editorial Embudo de Conversión" onerror="this.style.background='#eee';this.style.minHeight='130px'">
+      <div class="fnote"><em>Nota.</em> Calendario editorial alineado al embudo de conversión. Planificación semanal que optimiza el flujo de usuarios desde la atracción orgánica (TOFU) mediante Reels virales, hasta la fidelización (BOFU) a través de narrativas personales y Stories de interacción directa. Elaboración propia.</div>
+    </div>
+
+    <h3>6.4 Pautas de LinkedIn</h3>
+    <p>Aunque el eje central de la estrategia se sitúa en Instagram, <strong>LinkedIn</strong> se establece como el canal secundario fundamental para potenciar la dimensión profesional y el networking estratégico. El objetivo principal en esta red no es el consumidor final, sino el posicionamiento ante agencias de comunicación, marcas del sector y otros profesionales del marketing digital y la gastronomía. Las pautas de publicación se centrarán en:</p>
+
+    <div class="wf"><div class="wfn">1</div><div><div class="wft">Gestión y Workflow de Proyectos</div><p class="wfd">Compartir el proceso administrativo y organizativo de la creación de contenido gastronómico profesional, aprovechando la formación en administración de empresas y gestión del autor.</p></div></div>
+    <div class="wf"><div class="wfn">2</div><div><div class="wft">Análisis y Reflexiones de Mercado</div><p class="wfd">Publicar valoraciones propias sobre tendencias de branding personal y marketing digital aplicadas al sector de la restauración en Canarias.</p></div></div>
+    <div class="wf"><div class="wfn">3</div><div><div class="wft">Evolución y Logros del Proyecto</div><p class="wfd">Documentar hitos específicos del desarrollo de la marca personal como caso de estudio, reforzando la credibilidad técnica ante posibles colaboradores corporativos.</p></div></div>
+
+    <div class="hl-acc"><p style="margin:0;font-size:8.5pt"><strong>Frecuencia estimada:</strong> Una publicación semanal en LinkedIn, priorizando la calidad del análisis y el tono profesional sobre la cantidad.</p></div>
+  </div>
+  <div class="pf"><div>Ángel Jesús Hernández Santana · 15/12/2025</div><div>@angelhs.91</div><div><span class="pn">13</span></div></div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     PÁG 14 · DINAMIZACIÓN LINKEDIN Y CONTROL KPIs
+══════════════════════════════════════════════════════════════ -->
+<div class="a4">
+  <div class="ph"><div><img src="avatar.webp" alt="" class="ph-av" onerror="this.outerHTML='<div class=ph-av-fb>Á</div>'"></div><div class="ph-r"><img src="logo.webp" alt="Cruz de Piedra · CIFP" class="logo-img"></div></div>
+  <div class="pb">
+    <h3>6.5 Dinamización en LinkedIn</h3>
+    <p>Para asegurar que el perfil no sea únicamente un repositorio de contenido, sino una herramienta activa de generación de oportunidades, se aplicará un plan de dinamización basado en tres acciones tácticas:</p>
+
+    <div class="g3" style="gap:8px;margin-bottom:12px">
+      <div class="card" style="padding:12px;text-align:center;border-top:4px solid #0077B5"><div style="font-size:18pt;margin-bottom:5px">🔍</div><h4 style="color:#0077B5;font-size:8.5pt;margin-top:0">Interacción Proactiva</h4><p style="font-size:7.5pt;margin:0">Tiempo semanal para interactuar con publicaciones de líderes de opinión en marketing digital y directivos de empresas gastronómicas y turísticas.</p></div>
+      <div class="card" style="padding:12px;text-align:center;border-top:4px solid var(--primary)"><div style="font-size:18pt;margin-bottom:5px">💬</div><h4 style="color:var(--primary);font-size:8.5pt;margin-top:0">Participación en Foros</h4><p style="font-size:7.5pt;margin:0">Intervenir en conversaciones estratégicas sobre marca personal y creación de contenidos, aportando visión técnica que demuestre dominio de herramientas digitales.</p></div>
+      <div class="card" style="padding:12px;text-align:center;border-top:4px solid var(--secondary)"><div style="font-size:18pt;margin-bottom:5px">#️⃣</div><h4 style="color:#0A6E3E;font-size:8.5pt;margin-top:0">Etiquetado y Visibilidad</h4><p style="font-size:7.5pt;margin:0">Uso de hashtags transversales como <strong>#marketingdigital</strong>, <strong>#gastronomia</strong> y <strong>#marcapersonal</strong>, facilitando la indexación en búsquedas profesionales del nicho.</p></div>
+    </div>
+
+    <div class="fig">
+      <div class="fn">Figura 13</div>
+      <div class="ft">Hoja de ruta de posicionamiento profesional B2B en LinkedIn</div>
+      <img src="figura_13.webp" alt="Workflow LinkedIn" onerror="this.style.background='#eee';this.style.minHeight='120px'">
+      <div class="fnote"><em>Nota.</em> Esquema de dinamización profesional centrado en proyectar las competencias de gestión y análisis de mercado del autor, facilitando la conexión estratégica con agencias y empresas del sector. Elaboración propia.</div>
+    </div>
+
+    <div class="div"><span></span></div>
+
+    <div class="sb" style="padding:14px 20px"><div class="stag">07 · Control</div><div class="stitle">Dashboard de <span>Métricas y KPIs</span></div></div>
+
+    <p>Para evaluar el progreso de la marca en un horizonte de 6 meses, se definen los siguientes indicadores clave de rendimiento, monitorizados mensualmente con herramientas de <em>Social Listening</em> y analítica nativa de Meta:</p>
+
+    <div class="g4" style="margin:10px 0">
+      <div class="stat"><div class="sn">+25%</div><div class="sl">Crecimiento Seguidores</div><div class="ss">↑ Meta: 6 meses</div></div>
+      <div class="stat"><div class="sn">10%</div><div class="sl">Engagement Rate</div><div class="ss">↑ vs. media 3-5%</div></div>
+      <div class="stat"><div class="sn">+15%</div><div class="sl">Índice de Saves</div><div class="ss">↑ Meta: 4 meses</div></div>
+      <div class="stat"><div class="sn">2</div><div class="sl">Colaboraciones</div><div class="ss">↑ Meta: 6 meses</div></div>
+    </div>
+
+    <div class="fig">
+      <div class="fn">Figura 14</div>
+      <div class="ft">Dashboard de Metas SMART de @angelhs.91: panel de control para la monitorización de indicadores clave</div>
+      <img src="figura_14.webp" alt="Dashboard Metas SMART" onerror="this.style.background='#eee';this.style.minHeight='130px'">
+      <div class="fnote"><em>Nota.</em> Panel de control para la monitorización de indicadores clave en un horizonte de 6 meses, priorizando el crecimiento de la comunidad (+25%), la tasa de engagement (10%) y el índice de utilidad de los contenidos (+15% de guardados). Elaboración propia.</div>
+    </div>
+  </div>
+  <div class="pf"><div>Ángel Jesús Hernández Santana · 15/12/2025</div><div>@angelhs.91</div><div><span class="pn">14</span></div></div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     PÁG 15 · IDENTIDAD VISUAL
+══════════════════════════════════════════════════════════════ -->
+<div class="a4">
+  <div class="ph"><div><img src="avatar.webp" alt="" class="ph-av" onerror="this.outerHTML='<div class=ph-av-fb>Á</div>'"></div><div class="ph-r"><img src="logo.webp" alt="Cruz de Piedra · CIFP" class="logo-img"></div></div>
+  <div class="pb">
+    <div class="sb"><div class="stag">08 · Identidad Visual</div><div class="stitle">Manual de Marca y <span>Brandbook</span></div></div>
+
+    <p>La identidad visual es el soporte de la <strong>voz de marca</strong>, definida como cercana, didáctica y creativa. Todos los elementos visuales deben transmitir autenticidad, naturalidad y conexión con la gastronomía canaria, garantizando coherencia absoluta para lograr reconocimiento instantáneo en el <em>feed</em> del usuario.</p>
+
+    <h3>1. Paleta Cromática</h3>
+    <p>Selección de colores orgánicos que remiten a la geografía canaria, aportando calidez y profesionalidad:</p>
+    <div class="g3" style="gap:8px;margin-bottom:10px">
+      <div><div class="sw" style="background:#966F4A"></div><div class="swi"><div class="swn">Tierra Quemada</div><div class="swh">#966F4A</div></div></div>
+      <div><div class="sw" style="background:#E3D9C1"></div><div class="swi"><div class="swn">Arena Suave</div><div class="swh">#E3D9C1</div></div></div>
+      <div><div class="sw" style="background:#7C8657"></div><div class="swi"><div class="swn">Oliva Natural</div><div class="swh">#7C8657</div></div></div>
+    </div>
+
+    <h3>2. Tipografía y Fuentes de Marca</h3>
+    <div class="g2" style="gap:8px;margin-bottom:10px">
+      <div class="card" style="padding:11px;border-left:4px solid var(--primary)"><div style="font-size:6.5pt;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:3px">Tipografía Principal — Títulos</div><div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:13pt;color:var(--dark)">Montserrat Bold</div><div style="font-family:'Lato',sans-serif;font-size:9pt;color:var(--text-2);margin-top:2px">Poppins SemiBold / Open Sans</div></div>
+      <div class="card" style="padding:11px;border-left:4px solid var(--secondary)"><div style="font-size:6.5pt;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:3px">Tipografía Cuerpo — Descripciones</div><div style="font-family:'Lato',sans-serif;font-size:12pt;color:var(--dark)">Lato Regular</div><div style="font-size:9pt;color:var(--text-2);margin-top:2px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at varius.</div></div>
+    </div>
+
+    <h3>3. Estética Visual y Fotografía</h3>
+    <div class="g2" style="gap:8px;margin-bottom:10px">
+      <div class="card card-warm" style="padding:11px"><h4 style="margin-top:0;color:var(--tierra)">📷 Fotografía</h4><ul class="bl" style="font-size:8pt"><li>Iluminación natural y planos cercanos</li><li>Resaltar texturas de los alimentos</li><li>Fotografía de producto km0 canario</li><li>Paisajes volcánicos como contexto</li><li>Estética coherente y cuidada</li></ul></div>
+      <div class="card card-teal" style="padding:11px"><h4 style="margin-top:0;color:#0A6E3E">🎬 Vídeo (Reels)</h4><ul class="bl" style="font-size:8pt"><li>Formato vertical 9:16 optimizado</li><li>Primeros 3 segundos con gancho visual</li><li>Edición dinámica con cortes rápidos</li><li>Música trending de Instagram</li><li>Subtítulos para mejorar accesibilidad</li></ul></div>
+    </div>
+
+    <div class="fig">
+      <div class="fn">Figura 15</div>
+      <div class="ft">Guía de Identidad Gastronómica: paleta de colores, texturas, tipografía y voz de marca</div>
+      <img src="figura_15.webp" alt="Guía de Identidad Visual Gastronómica" onerror="this.style.background='#eee';this.style.minHeight='140px'">
+      <div class="fnote"><em>Nota.</em> Moodboard de identidad visual y voz de marca. Definición estética basada en una paleta de colores naturales y una dirección de arte enfocada en la autenticidad, garantizando la coherencia visual necesaria para el reconocimiento de marca en entornos digitales saturados. Elaboración propia.</div>
+    </div>
+
+    <h3>4. Voz y Tono de Comunicación</h3>
+    <div class="g3" style="gap:8px">
+      <div class="voz" style="flex-direction:column;align-items:center;text-align:center;display:flex;border:1px solid #E8E8E8"><div class="vozi">🤝</div><div><div class="vozl">Cercana</div><p class="vozd">Hablamos de tú a tú, conectamos emocionalmente y compartimos conocimiento con naturalidad.</p></div></div>
+      <div class="voz" style="flex-direction:column;align-items:center;text-align:center;display:flex;border:1px solid #E8E8E8"><div class="vozi">📚</div><div><div class="vozl">Didáctica</div><p class="vozd">Enseñamos con claridad, rigor y sencillez técnicas y tradiciones gastronómicas canarias.</p></div></div>
+      <div class="voz" style="flex-direction:column;align-items:center;text-align:center;display:flex;border:1px solid #E8E8E8"><div class="vozi">🌿</div><div><div class="vozl">Auténtica</div><p class="vozd">Fieles a nuestras raíces canarias. Usamos ingredientes locales y técnicas tradicionales genuinas.</p></div></div>
+    </div>
+  </div>
+  <div class="pf"><div>Ángel Jesús Hernández Santana · 15/12/2025</div><div>@angelhs.91</div><div><span class="pn">15</span></div></div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     PÁG 16 · CONCLUSIONES
+══════════════════════════════════════════════════════════════ -->
+<div class="a4" style="background:var(--dark)">
+  <!-- ★ HEADER OSCURO CON LOGO BLANCO ★ -->
+  <div class="ph" style="background:var(--dark);border-color:rgba(255,255,255,.1)">
+    <div><img src="avatar.webp" alt="" class="ph-av" onerror="this.outerHTML='<div class=ph-av-fb>Á</div>'"></div>
+    <div class="ph-r"><img src="logo.webp" alt="Cruz de Piedra · CIFP" class="logo-img-dark"></div>
+  </div>
+  <div class="pb">
+    <div class="sb" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1)"><div class="stag">Conclusiones</div><div class="stitle">Reflexiones Finales y <span>Prospectiva</span></div></div>
+
+    <p style="color:rgba(255,255,255,.75)">El presente Trabajo Fin de Máster ha permitido analizar la situación actual de la marca personal en el entorno digital y diseñar una estrategia de contenidos orientada a fortalecer su posicionamiento en Instagram dentro del ámbito gastronómico. A través del análisis interno y externo se han identificado las principales fortalezas, debilidades, oportunidades y amenazas que influyen en el desarrollo de la marca personal.</p>
+
+    <div class="con"><div class="conn">1</div><p class="cont">Los resultados evidencian que factores como la <strong>autenticidad en la comunicación</strong>, una estética visual coherente y la constancia en la publicación de contenidos son elementos fundamentales para diferenciarse en un entorno digital altamente competitivo.</p></div>
+    <div class="con"><div class="conn">2</div><p class="cont">En el contexto actual de las redes sociales, el <strong>contenido gastronómico con una narrativa cercana y visualmente atractiva</strong> tiene un alto potencial para generar conexión con la audiencia y fomentar la creación de comunidades digitales genuinas.</p></div>
+    <div class="con"><div class="conn">3</div><p class="cont">El análisis de tendencias confirma la relevancia de los <strong>formatos audiovisuales cortos</strong>, especialmente los vídeos tipo Reels, como herramienta estratégica para aumentar el alcance y la visibilidad en Instagram (Sisova, 2023). La combinación de creatividad, storytelling personal y contenido visual dinámico permite captar la atención del público.</p></div>
+    <div class="con"><div class="conn">4</div><p class="cont">Se ha diseñado una <strong>estrategia de contenidos estructurada en pilares temáticos</strong>, acompañada de un calendario editorial y de indicadores de rendimiento (KPIs) que permitirán evaluar el impacto de las acciones implementadas y realizar ajustes estratégicos cuando sea necesario.</p></div>
+    <div class="con"><div class="conn">5</div><p class="cont">Este trabajo establece una <strong>base sólida para el desarrollo progresivo de la marca personal</strong> en el ámbito gastronómico digital. La correcta implementación de la estrategia propuesta permitirá mejorar la visibilidad del perfil, fortalecer la relación con la audiencia y generar oportunidades de crecimiento profesional en el ecosistema de la creación de contenido.</p></div>
+    <div class="con" style="border-bottom:none"><div class="conn">6</div><p class="cont">Finalmente, es fundamental entender la <strong>estrategia digital como un proceso dinámico</strong>, que debe adaptarse continuamente a la evolución de las plataformas, a los cambios en los algoritmos y a las preferencias de la audiencia. La implementación de IA y nuevas herramientas deberá integrarse de forma progresiva.</p></div>
+
+    <div class="fig" style="margin-top:14px">
+      <div class="fn" style="color:#fff">Figura 16</div>
+      <div class="ft" style="color:rgba(255,255,255,.7)">Visión de futuro de la marca @angelhs.91: integración de la gastronomía canaria, la tecnología digital y la identidad personal auténtica</div>
+      <img src="figura_16.webp" alt="Foto conclusiones" style="border:2px solid rgba(255,255,255,.15)" onerror="this.style.background='rgba(255,255,255,0.05)';this.style.minHeight='110px'">
+      <div class="fnote" style="color:rgba(255,255,255,.4)"><em>Nota.</em> Elaboración propia.</div>
+    </div>
+
+    <div class="qt" style="margin-top:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12)">
+      <p style="text-align:center;font-size:10pt">"La estrategia de marca personal no es un destino, sino un camino que se construye publicación a publicación, interacción a interacción, plato a plato."<br><strong style="color:var(--secondary-light);font-style:normal;font-size:9pt">— @angelhs.91</strong></p>
+    </div>
+  </div>
+  <div class="pf" style="border-color:rgba(255,255,255,.1);color:rgba(255,255,255,.4)">
+    <div>Ángel Jesús Hernández Santana · 15/12/2025</div>
+    <div>@angelhs.91</div>
+    <div><span class="pn">16</span></div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     PÁG 17-18 · BIBLIOGRAFÍA APA 7
+══════════════════════════════════════════════════════════════ -->
+<div class="a4">
+  <div class="ph"><div><img src="avatar.webp" alt="" class="ph-av" onerror="this.outerHTML='<div class=ph-av-fb>Á</div>'"></div><div class="ph-r"><img src="logo.webp" alt="Cruz de Piedra · CIFP" class="logo-img"></div></div>
+  <div class="pb-c">
+    <div class="sb" style="padding:13px 20px"><div class="stag">Referencias</div><div class="stitle"><span>Bibliografía</span></div></div>
+
+    <div class="hl" style="margin-bottom:12px"><p style="margin:0;font-size:7.5pt;color:var(--primary-dark)">Las referencias se presentan en orden alfabético siguiendo la 7.ª edición del <em>Publication Manual</em> de la American Psychological Association (APA, 2020), con sangría francesa.</p></div>
+
+    <div class="bib">American Psychological Association. (2020). <em>Publication manual of the American Psychological Association</em> (7.ª ed.). American Psychological Association.</div>
+    <div class="bib">Asociación Española de Anunciantes. (2024). <em>Guía de influencer marketing 2024</em>. IAB Spain.</div>
+    <div class="bib">Autocontrol. (2025). <em>Código de conducta para la publicidad a través de influencers</em>. https://www.autocontrol.es/</div>
+    <div class="bib">Boyd, D. M., &amp; Ellison, N. B. (2007). Social network sites: Definition, history, and scholarship. <em>Journal of Computer-Mediated Communication</em>, <em>13</em>(1), 210–230. https://doi.org/10.1111/j.1083-6101.2007.00393.x</div>
+    <div class="bib">Brickner, K. (2023). How significant is Instagram in shaping personal branding: Literature review. <em>Journal of Marketing Research</em>, <em>58</em>(3), 245–268.</div>
+    <div class="bib">Cámara de Comercio de Canarias. (2024). <em>Análisis del sector turístico en Canarias 2024</em>. https://www.camarasdecanarias.es/</div>
+    <div class="bib">Dirección General de Industria. (2024). <em>Plan de apoyo al emprendimiento digital en Canarias</em>. Gobierno de Canarias. https://www.gobiernodecanarias.org/</div>
+    <div class="bib">European Commission. (2024). <em>Digital Europe programme: Spain's digital transformation strategy</em>. EC.</div>
+    <div class="bib">González, D. (2025). <em>Manual de fundamentos del marketing y la gestión de proyectos digitales</em>. Cruz de Piedra CIFP.</div>
+    <div class="bib">González, D. (2025). <em>Manual de estrategia de contenidos digitales</em>. Cruz de Piedra CIFP.</div>
+    <div class="bib">Hernández, G., López-Martín, S., &amp; Rodríguez, E. (2023). Influence of artificial intelligence on content creation in social media marketing. <em>Digital Marketing Quarterly</em>, <em>12</em>(4), 89–105.</div>
+    <div class="bib">IAB Spain. (2024). <em>Estudio de redes sociales 2024</em>. Interactive Advertising Bureau.</div>
+    <div class="bib">Instituto Nacional de Estadística. (2024). <em>Encuesta sobre equipamiento y uso de tecnología de información y comunicación en los hogares 2024</em>. INE.</div>
+    <div class="bib">Jansen, B. J., Zhang, M., Sobel, K., &amp; Chowdury, A. (2009). Twitter power: Tweets as electronic word of mouth. <em>Journal of the American Society for Information Science and Technology</em>, <em>60</em>(11), 2169–2188. https://doi.org/10.1002/asi.21149</div>
+    <div class="bib">Ministerio de Consumo. (2025). <em>Ley general de comunicación audiovisual. Real Decreto 444/2024</em>. Boletín Oficial del Estado.</div>
+    <div class="bib">Ministerio de Industria, Comercio y Turismo. (2024). <em>Informe de inversión en influencer marketing en España 2024</em>. Gobierno de España.</div>
+    <div class="bib">Navarro-Beltrá, M., &amp; Herrero, E. (2023). Engagement en redes sociales: análisis comparativo de cuentas de alimentación saludable. <em>Revista de Comunicación Digital</em>, <em>15</em>(2), 123–147.</div>
+    <div class="bib">Organización de las Naciones Unidas para la Alimentación y la Agricultura. (2023). <em>The state of food sustainability in Southern Europe</em>. FAO.</div>
+    <div class="bib">Parlamento Europeo y del Consejo. (2016). <em>Reglamento (UE) 2016/679, de 27 de abril de 2016, relativo a la protección de las personas físicas en lo que respecta al tratamiento de datos personales</em> [RGPD]. <em>Diario Oficial de la Unión Europea</em>, L119, 1–88.</div>
+    <div class="bib">Rahman, Z., Peris-Ortiz, M., &amp; Tarhini, A. (2022). Consumer engagement with visual content on Instagram: Impact of different features of posts by prominent brands. <em>Journal of Retailing and Consumer Services</em>, <em>68</em>, 102950. https://doi.org/10.1016/j.jretconser.2022.102950</div>
+    <div class="bib">Real Decreto 1082/2009, de 3 de julio, por el que se complementan las normas sobre protección de datos personales. <em>Boletín Oficial del Estado</em>, 166, 58755–58758.</div>
+    <div class="bib">Rodríguez Gómez, G., &amp; García Jiménez, E. (2021). Influencer marketing en el sector alimentario: estrategias y casos de éxito. <em>Marketing y Publicidad Contemporánea</em>, <em>18</em>(3), 234–258.</div>
+    <div class="bib">Sisova, A. (2023). <em>Short-form video content on Instagram Reels: User engagement and brand awareness strategies</em> [Tesis de Maestría, Universidad Metropolitana de Helsinki]. Theseus. https://www.theseus.fi/bitstream/handle/10024/812191/Sisova_Aleksandra.pdf</div>
+    <div class="bib">SocialInsider. (2024). <em>Instagram content trends report 2024</em>. https://www.socialinsider.io/</div>
+    <div class="bib">Statista. (2024). <em>Instagram users in Spain 2024 – Statistics and forecast</em>. https://www.statista.com/</div>
+    <div class="bib">Turismo de Canarias. (2024). <em>Plan estratégico de gastronomía y enología 2024–2027</em>. Consejería de Industria, Comercio y Artesanía. Gobierno de Canarias.</div>
+    <div class="bib">Turismo de España. (2024). <em>Plan turístico de enogastronomía</em>. Secretaría de Estado de Turismo.</div>
+    <div class="bib">Visual Publications. (2023). Engagement and interaction patterns in health-focused Instagram accounts: A comparative analysis. <em>Revista Visual Communications</em>, <em>9</em>(2), 45–67. https://visualcompublications.es/revVISUAL/article/download/4608/2930/15566</div>
+    <div class="bib">Xie, K. L., &amp; Lee, J. S. (2021). Toward the perspective of cognitive destination image and destination personality: The case of Beijing. <em>Journal of Travel &amp; Tourism Marketing</em>, <em>30</em>(7), 1236–1248. https://doi.org/10.1080/10548408.2013.750006</div>
+  </div>
+  <div class="pf"><div>Ángel Jesús Hernández Santana · 15/12/2025</div><div>@angelhs.91</div><div><span class="pn">17</span></div></div>
+</div>
+
+</body>
+</html>
